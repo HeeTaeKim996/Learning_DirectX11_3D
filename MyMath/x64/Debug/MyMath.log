@@ -1,0 +1,17 @@
+﻿  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\assert.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\CoreDefenition.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\correct_math.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\MathUtils.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myEulerAngles.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myMatrix3x3.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myMatrix4x4.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myQuaternion.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myVec3.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myVec4.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\pch.h
+  11개 파일이 복사되었습니다.
+  myEulerAngles.cpp
+  myQuaternion.cpp
+  myVec4.cpp
+  코드를 생성하고 있습니다...
+  MyMath.vcxproj -> C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMathTester\Libs\Libraries\Debug\MyMath.lib
