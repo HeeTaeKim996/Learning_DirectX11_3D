@@ -7,7 +7,7 @@
 const myQuaternion myQuaternion::Identity;
 
 
-myQuaternion::myQuaternion() : X(0.f), Y(0.f), Z(0.f), W(0.f)
+myQuaternion::myQuaternion() : X(0.f), Y(0.f), Z(0.f), W(1.f)
 {
 }
 
@@ -46,9 +46,9 @@ void myQuaternion::FromAxisAngle(const myVec3& InAxis, float inAngleDegree)
 void myQuaternion::FromEulerAngles(const myEulerAngles& InEulerAngles)
 {
 	float cy = 0.f, sy = 0.f, cp = 0.f, sp = 0.f, cr = 0.f, sr = 0.f;
-	Math::GetSinCos(sy, cy, InEulerAngles.Yaw);
-	Math::GetSinCos(sp, cp, InEulerAngles.Pitch);
-	Math::GetSinCos(sr, cr, InEulerAngles.Roll);
+	Math::GetSinCos(sy, cy, InEulerAngles.Yaw * 0.5f);
+	Math::GetSinCos(sp, cp, InEulerAngles.Pitch * 0.5f);
+	Math::GetSinCos(sr, cr, InEulerAngles.Roll * 0.5f);
 
 #ifdef YAW_PITCH_ROLL
 	W = cy * cp * cr + sy * sp * sr;
@@ -66,16 +66,28 @@ void myQuaternion::FromEulerAngles(const myEulerAngles& InEulerAngles)
 #endif
 }
 
+//#include "iostream"  // For Debug
 void myQuaternion::FromMatrix(const myMatrix3x3& InMatrix)
 {
 	float root = 0.f;
 	float trace = InMatrix[0][0] + InMatrix[1][1] + InMatrix[2][2];
 
-	if (!Math::EqualsInTolerance(InMatrix[0].SizeSquared(), 1.f) ||
-		!Math::EqualsInTolerance(InMatrix[1].SizeSquared(), 1.f) ||
-		!Math::EqualsInTolerance(InMatrix[2].SizeSquared(), 1.f))
+
+	//{ // DEBUG
+	//	std::cout << (float)InMatrix[0].SizeSquared() << std::endl;
+	//	std::cout << (float)InMatrix[1].SizeSquared() << std::endl;
+	//	std::cout << (float)InMatrix[2].SizeSquared() << std::endl;
+	//}
+
+	const float eps = 1e-4f; 
+	// ※ SMALL_NUMBER(1e-6f)로 하니, 타이트해서 오차 못잡고 리턴때리는 경우가 생겨서, 좀 더 느슨하게 1e-4f 로 처리
+
+	if (!Math::EqualsInTolerance(InMatrix[0].SizeSquared(), 1.f, eps) ||
+		!Math::EqualsInTolerance(InMatrix[1].SizeSquared(), 1.f, eps) ||
+		!Math::EqualsInTolerance(InMatrix[2].SizeSquared(), 1.f, eps))
 	{
 		*this = myQuaternion::Identity;
+		return;
 	}
 
 	if (trace > 0.f)
@@ -85,9 +97,9 @@ void myQuaternion::FromMatrix(const myMatrix3x3& InMatrix)
 		W = 0.5f * root;
 		root = 0.5f / root;
 
-		X = (InMatrix[1][2] - InMatrix[2][1]) * root;
-		Y = (InMatrix[2][0] - InMatrix[0][2]) * root;
-		Z = (InMatrix[0][1] - InMatrix[1][0]) * root;
+		X = (InMatrix[2][1] - InMatrix[1][2]) * root;
+		Y = (InMatrix[0][2] - InMatrix[2][0]) * root;
+		Z = (InMatrix[1][0] - InMatrix[0][1]) * root;
 	}
 	else
 	{
@@ -112,11 +124,11 @@ void myQuaternion::FromMatrix(const myMatrix3x3& InMatrix)
 		root = 0.5f / root;
 
 		// 나머지 두 요소의 값 구하기
-		*qt[j] = (InMatrix[i][j] + InMatrix[j][i]) * root;
-		*qt[k] = (InMatrix[i][k] + InMatrix[k][i]) * root;
+		*qt[j] = (InMatrix[j][i] + InMatrix[i][j]) * root;
+		*qt[k] = (InMatrix[k][i] + InMatrix[i][k]) * root;
 
 		// 마지막 W값 구하기
-		W = (InMatrix[j][k] - InMatrix[k][j]) * root;
+		W = (InMatrix[k][j] - InMatrix[j][k]) * root;
 	}
 }
 
@@ -167,10 +179,11 @@ myQuaternion myQuaternion::operator*(const myQuaternion& InQuaternion) const
 
 myQuaternion myQuaternion::operator*=(const myQuaternion& InQuaternion)
 {
+	float w0 = W;
 	myVec3 v1(X, Y, Z), v2(InQuaternion.X, InQuaternion.Y, InQuaternion.Z);
 
-	W = W * InQuaternion.W - v1.Dot(v2);
-	myVec3 imaginaryPart = v1 * InQuaternion.W + v2 * W + v1.Cross(v2);
+	W = w0 * InQuaternion.W - v1.Dot(v2);
+	myVec3 imaginaryPart = v1 * InQuaternion.W + v2 * w0 + v1.Cross(v2);
 	X = imaginaryPart.X;
 	Y = imaginaryPart.Y;
 	Z = imaginaryPart.Z;
@@ -183,35 +196,128 @@ myVec3 myQuaternion::operator*(const myVec3& InVector) const
 	return RotateVector(InVector);
 }
 
-myQuaternion myQuaternion::Slerp(const myQuaternion& startQuaternion, const myQuaternion& endQuaternion, float InRatio)
+myQuaternion myQuaternion::Slerp(myQuaternion startQuaternion, myQuaternion endQuaternion, float InRatio)
 {
-	// @@@ 여기부터 
+	// 사원수의 내적 구하기
+	float dot = startQuaternion.X * endQuaternion.X + startQuaternion.Y * endQuaternion.Y
+		+ startQuaternion.Z * endQuaternion.Z + startQuaternion.W * endQuaternion.W;
+
+	/* 내적 값이 0보다 작으면 최단거리는 사용하도록 방향을 전환(q v q* 이기 때문에 2배..예상이므로, 
+	   cos(세타)가 음수이면 반대방향이 더 빠름*/
+	if (dot < 0.0f)
+	{
+		endQuaternion = -endQuaternion;
+		dot = -dot;
+
+		/* ※	기존 교재의 코드는 startQuaternion을 반전시키는 것이었다.내가 이해하기로는 수리적으로 startQuaternion을
+				반전시켜도 문제가 없다고 생각했지만, 지피티는 startQuaternion이 아닌 endQuaternon을 반전시켜야, 
+				t 의 경계값이 깨지지 않는다고 한다. 이부분을 이해하지는 못해서, 여전히 startQuaternion을 반전시켰을 때의
+				문제점을 이해하지는 못했지만, 지피티가 강조하니.. startQuaternion이 아닌, endQuaternion을 반전시켰다.
+		*/ 
+	}
+
+	float alpha = 1.f, beta = 0.f;
+	if (dot > 0.9995f) // 두사원수의 사잇각이 작으면, 선형보간 수행
+	{
+		alpha = 1.0f - InRatio;
+		beta = InRatio;
+	}
+	else
+	{
+		const float theta = acosf(dot);
+		const float invSin = 1.f / sinf(theta);
+		alpha = sinf((1.f - InRatio) * theta) * invSin;
+		beta = sinf(InRatio * theta) * invSin;
+	}
+
+	myQuaternion result;
+	result.X = alpha * startQuaternion.X + beta * endQuaternion.X;
+	result.Y = alpha * startQuaternion.Y + beta * endQuaternion.Y;
+	result.Z = alpha * startQuaternion.Z + beta * endQuaternion.Z;
+	result.W = alpha * startQuaternion.W + beta * endQuaternion.W;
+
+	return result;
 }
 
-myVec3 myQuaternion::RotateVector(const myVec3& InVector) const
+myVec3 myQuaternion::RotateVector(const myVec3& v) const
 {
-	return myVec3();
+	myVec3 r(X, Y, Z);
+	myVec3 t = v.Cross(r) * 2.f;
+	myVec3 result = v + t * W + t.Cross(r);
+	return result;
 }
 
 void myQuaternion::Normalize()
 {
+	const float squareSum = X * X + Y * Y + Z * Z + W * W;
+
+	if (squareSum >= SMALL_NUMBER)
+	{
+		const float scale = 1.f / sqrtf(squareSum);
+
+		X *= scale;
+		Y *= scale;
+		Z *= scale;
+		W *= scale;
+	}
+	else
+	{
+		*this = myQuaternion::Identity;
+	}
 }
 
 
 
 myEulerAngles myQuaternion::ToEulerAngles() const
 {
-	return myEulerAngles();
+#ifdef YAW_PITCH_ROLL
+	myEulerAngles retEuler;
+
+	float sinRcosP = 2 * (W * Z + X * Y);
+	float cosRcosP = 1 - 2 * (X * X + Z * Z);
+	retEuler.Roll = Math::Rad2Deg(atan2(sinRcosP, cosRcosP));
+
+	float halfSinP = (W * X - Y * Z);
+	float asinThreshold = 0.4999995f;
+	if (halfSinP < -asinThreshold)
+	{
+		retEuler.Pitch = -90.f;
+	}
+	else if (halfSinP > asinThreshold)
+	{
+		retEuler.Pitch = 90.f;
+	}
+	else
+	{
+		retEuler.Pitch = Math::Rad2Deg(asinf((2.f * halfSinP)));
+	}
+
+	float sinYcosP = 2 * (W * Y + X * Z);
+	float cosYcosP = 1 - 2 * (X * X + Y * Y);
+	retEuler.Yaw = Math::Rad2Deg(atan2(sinYcosP, cosYcosP));
+
+	return retEuler;
+#elif ROLL_PITCH_YAW
+	assert(0); // W X Y Z 순으로 - - + + 일때의 euler->quat 을 기반으로 한 공식 도출이 필요한데, 아직 안구함..
+#else
+	assert(0); // 플래그 최소 1개 필요
+#endif
 }
 
-myMatrix3x3 myQuaternion::ToRotateVector() const
+myMatrix3x3 myQuaternion::ToRotateMatrix() const
 {
-	return myMatrix3x3();
+	return myMatrix3x3(RotateVector(myVec3(1, 0, 0)), RotateVector(myVec3(0, 1, 0)), RotateVector(myVec3(0, 0, 1)));
 }
 
 
 
 bool myQuaternion::IsUnitQuaternion() const
 {
+	float size = sqrtf(X * X + Y * Y + Z * Z + W * W);
+	if (Math::EqualsInTolerance(size, 1.f))
+	{
+		return true;
+	}
+
 	return false;
 }

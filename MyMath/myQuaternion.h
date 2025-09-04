@@ -30,7 +30,7 @@ public:
 	myQuaternion operator*(const myQuaternion& InQuaternion) const;
 	myQuaternion operator*=(const myQuaternion& InQuaternion);
 	myVec3 operator*(const myVec3& InVector) const;
-	static myQuaternion Slerp(const myQuaternion& startQuaternion, const myQuaternion& endQuaternion,
+	static myQuaternion Slerp(myQuaternion startQuaternion, myQuaternion endQuaternion,
 		float InRatio);
 
 
@@ -38,7 +38,8 @@ public:
 	myQuaternion Inverse() const { return myQuaternion(-X, -Y, -Z, W); }
 	void Normalize();
 	myEulerAngles ToEulerAngles() const;
-	myMatrix3x3 ToRotateVector() const;
+	myMatrix3x3 ToRotateMatrix() const;
+
 	bool IsUnitQuaternion() const;
 	
 	float RealPart() const { return W; }
@@ -48,7 +49,7 @@ public:
 public:
 	const static myQuaternion Identity;
 
-private:
+public:
 	float X;
 	float Y;
 	float Z;

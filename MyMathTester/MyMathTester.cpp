@@ -5,6 +5,9 @@
 #include "myMatrix3x3.h"
 #include "myVec4.h"
 #include "myMatrix4x4.h"
+#include "myEulerAngles.h"
+#include "myQuaternion.h"
+#include "TesterUtils.h"
 
 using namespace std;
 
@@ -220,12 +223,86 @@ void TestVec4Matrix4x4()
         << K[3].X << "," << K[3].Y << "," << K[3].Z << "," << K[3].W << endl;
 }
 
+
+void TestQuaternion()
+{
+    if(1)
+    {
+        //myEulerAngles startEuler(90.f, 0.f, 0.f);
+        //myEulerAngles startEuler(45.f, 45.f, 0.f);
+        myEulerAngles startEuler(45.f, 0, 0);
+
+        myQuaternion mainQuaternion(startEuler);
+
+        myVec3 testVec = mainQuaternion.RotateVector(myVec3::UnitX);
+
+        cout << "StartPos" << endl;
+        cout << testVec.X << "  /  " << testVec.Y << "  /  " << testVec.Z << endl;
+        printf("\n");
+
+
+        myQuaternion rotQuaternion(myVec3(1, 0, 0), 90.f);
+
+        mainQuaternion *= rotQuaternion;
+
+        myVec3 testVec2 = mainQuaternion.RotateVector(myVec3::UnitX);
+
+        cout << " Frist Rot Pos" << endl;
+        cout << testVec2.X << "  /  " << testVec2.Y << "  /  " << testVec2.Z << endl;
+        printf("\n");
+
+
+        myMatrix3x3 rotMatrix = mainQuaternion.ToRotateMatrix();
+
+        cout << "Rot Matrix IS " << endl;
+        PrintMatrix3x3(rotMatrix);
+        
+
+        mainQuaternion.Normalize();
+
+        cout << "Again After Normalized" << endl;
+        PrintMatrix3x3(mainQuaternion.ToRotateMatrix());
+    }
+
+
+    if(0)
+    {
+        cout << "Regression Test" << endl;
+        myEulerAngles startEuler(26.f, 87.f, 47.f);
+        //myEulerAngles startEuler(0.f, 0.001f, 80.999f);
+        //myEulerAngles startEuler(0.1, 0.2f, 0.3);
+
+        PrintEulerAngles(startEuler);
+
+        myQuaternion startQuat(startEuler);
+        PritQuaternion(startQuat);
+
+        myMatrix3x3 vertexMat = startQuat.ToRotateMatrix();
+        PrintMatrix3x3(vertexMat);
+
+        myQuaternion regQuat(vertexMat);
+        PritQuaternion(regQuat);
+
+        myEulerAngles regEuler = regQuat.ToEulerAngles();
+        PrintEulerAngles(regEuler);
+
+    }
+
+
+
+
+}
+
+
+
 int main()
 {
     //TestVec3();
 
     //TestMatrix3x3();
 
-    TestVec4Matrix4x4();
+    //TestVec4Matrix4x4();
+
+    TestQuaternion();
 
 }

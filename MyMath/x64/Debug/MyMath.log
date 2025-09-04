@@ -10,8 +10,5 @@
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myVec4.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\pch.h
   11개 파일이 복사되었습니다.
-  myEulerAngles.cpp
   myQuaternion.cpp
-  myVec4.cpp
-  코드를 생성하고 있습니다...
   MyMath.vcxproj -> C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMathTester\Libs\Libraries\Debug\MyMath.lib

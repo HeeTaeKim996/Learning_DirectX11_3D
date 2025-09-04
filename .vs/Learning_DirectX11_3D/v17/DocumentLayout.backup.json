@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{168A88CB-09FC-4854-80C0-3A709E3C8364}|MyMathTester\\MyMathTester.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\MyMathTester.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{168A88CB-09FC-4854-80C0-3A709E3C8364}|MyMathTester\\MyMathTester.vcxproj|solutionrelative:MyMathTester\\MyMathTester.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{168A88CB-09FC-4854-80C0-3A709E3C8364}|MyMathTester\\MyMathTester.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\TesterUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{168A88CB-09FC-4854-80C0-3A709E3C8364}|MyMathTester\\MyMathTester.vcxproj|solutionrelative:MyMathTester\\TesterUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myQuaternion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myQuaternion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\MathUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\MathUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myVec3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myEulerAngles.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myEulerAngles.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,12 +35,8 @@
       "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myEulerAngles.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myQuaternion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myQuaternion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myVec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -27,16 +47,8 @@
       "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\CoreDefenition.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myVec3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myMatrix3x3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myMatrix3x3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myVec3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -45,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec4.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myVec4.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{168A88CB-09FC-4854-80C0-3A709E3C8364}|MyMathTester\\MyMathTester.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\MyMathTester.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{168A88CB-09FC-4854-80C0-3A709E3C8364}|MyMathTester\\MyMathTester.vcxproj|solutionrelative:MyMathTester\\MyMathTester.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{168A88CB-09FC-4854-80C0-3A709E3C8364}|MyMathTester\\MyMathTester.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\TesterPch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -81,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2C2D9AA8-61C9-4AB4-B14A-DBDF76A868CC}|Client\\Client.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2C2D9AA8-61C9-4AB4-B14A-DBDF76A868CC}|Client\\Client.vcxproj|solutionrelative:Client\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\MathUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\MathUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\correct_math.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -597,37 +601,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 192,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "TesterUtils.h",
+              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\TesterUtils.h",
+              "RelativeDocumentMoniker": "MyMathTester\\TesterUtils.h",
+              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\TesterUtils.h",
+              "RelativeToolTip": "MyMathTester\\TesterUtils.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-04T04:40:08.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "myQuaternion.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.h",
               "RelativeDocumentMoniker": "MyMath\\myQuaternion.h",
-              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.h*",
-              "RelativeToolTip": "MyMath\\myQuaternion.h*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.h",
+              "RelativeToolTip": "MyMath\\myQuaternion.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-09-03T09:06:06.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "myEulerAngles.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myEulerAngles.h",
               "RelativeDocumentMoniker": "MyMath\\myEulerAngles.h",
               "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myEulerAngles.h",
               "RelativeToolTip": "MyMath\\myEulerAngles.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T08:45:32.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T08:45:32.9Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "myVec3.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec3.h",
               "RelativeDocumentMoniker": "MyMath\\myVec3.h",
@@ -635,12 +651,11 @@
               "RelativeToolTip": "MyMath\\myVec3.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T03:58:53.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T03:58:53.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "CoreDefenition.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\CoreDefenition.h",
               "RelativeDocumentMoniker": "MyMath\\CoreDefenition.h",
@@ -648,12 +663,11 @@
               "RelativeToolTip": "MyMath\\CoreDefenition.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T04:34:26.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T04:34:26.271Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "myVec4.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec4.h",
               "RelativeDocumentMoniker": "MyMath\\myVec4.h",
@@ -665,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "pch.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\pch.h",
               "RelativeDocumentMoniker": "MyMath\\pch.h",
@@ -673,12 +687,11 @@
               "RelativeToolTip": "MyMath\\pch.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T03:55:04.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T03:55:04.486Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "myMatrix3x3.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myMatrix3x3.h",
               "RelativeDocumentMoniker": "MyMath\\myMatrix3x3.h",
@@ -690,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "myMatrix4x4.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myMatrix4x4.h",
               "RelativeDocumentMoniker": "MyMath\\myMatrix4x4.h",
@@ -702,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "myVec3.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\Libs\\Include\\myVec3.h",
               "RelativeDocumentMoniker": "MyMathTester\\Libs\\Include\\myVec3.h",
@@ -714,7 +727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "pch.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\pch.cpp",
               "RelativeDocumentMoniker": "MyMath\\pch.cpp",
@@ -726,7 +739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "pch.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\pch.h",
               "RelativeDocumentMoniker": "Client\\pch.h",
@@ -738,7 +751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Camera.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Camera.h",
               "RelativeDocumentMoniker": "Engine\\Camera.h",
@@ -750,7 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "Transform.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Transform.h",
               "RelativeDocumentMoniker": "Engine\\Transform.h",
@@ -762,7 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "09. MeshDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\09. MeshDemo.h",
               "RelativeDocumentMoniker": "Client\\09. MeshDemo.h",
@@ -774,7 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "18. NormalMappingDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\18. NormalMappingDemo.h",
               "RelativeDocumentMoniker": "Client\\18. NormalMappingDemo.h",
@@ -786,7 +799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "RenderManager.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\RenderManager.h",
               "RelativeDocumentMoniker": "Engine\\RenderManager.h",
@@ -798,7 +811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "00. Global.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\00. Global.fx",
               "RelativeDocumentMoniker": "Shaders\\00. Global.fx",
@@ -810,7 +823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "00. Light.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\00. Light.fx",
               "RelativeDocumentMoniker": "Shaders\\00. Light.fx",
@@ -822,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "15. NormalMapping.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\15. NormalMapping.fx",
               "RelativeDocumentMoniker": "Shaders\\15. NormalMapping.fx",
@@ -834,7 +847,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Mesh.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Mesh.h",
               "RelativeDocumentMoniker": "Engine\\Mesh.h",
@@ -846,7 +859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "VertexData.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\VertexData.h",
               "RelativeDocumentMoniker": "Engine\\VertexData.h",
@@ -858,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "GeometryHelper.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\GeometryHelper.h",
               "RelativeDocumentMoniker": "Engine\\GeometryHelper.h",
@@ -870,7 +883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "Main.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\Main.h",
               "RelativeDocumentMoniker": "Client\\Main.h",
@@ -882,7 +895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "17. MaterialDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\17. MaterialDemo.h",
               "RelativeDocumentMoniker": "Client\\17. MaterialDemo.h",
@@ -894,7 +907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "Material.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Material.h",
               "RelativeDocumentMoniker": "Engine\\Material.h",
@@ -906,7 +919,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "ResourceManager.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\ResourceManager.h",
               "RelativeDocumentMoniker": "Engine\\ResourceManager.h",
@@ -918,7 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "MeshRenderer.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\MeshRenderer.h",
               "RelativeDocumentMoniker": "Engine\\MeshRenderer.h",
@@ -930,7 +943,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "14. Lighting.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\14. Lighting.fx",
               "RelativeDocumentMoniker": "Shaders\\14. Lighting.fx",
@@ -942,7 +955,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "InputManager.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\InputManager.h",
               "RelativeDocumentMoniker": "Engine\\InputManager.h",
@@ -954,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "TimeManager.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\TimeManager.h",
               "RelativeDocumentMoniker": "Engine\\TimeManager.h",
@@ -966,7 +979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "Graphics.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Graphics.h",
               "RelativeDocumentMoniker": "Engine\\Graphics.h",
@@ -978,7 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "Shader.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Shader.cpp",
               "RelativeDocumentMoniker": "Engine\\Shader.cpp",
@@ -990,7 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "Game.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Game.h",
               "RelativeDocumentMoniker": "Engine\\Game.h",
@@ -1002,7 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "16. LightingDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\16. LightingDemo.h",
               "RelativeDocumentMoniker": "Client\\16. LightingDemo.h",
@@ -1014,7 +1027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "13. Lighting_Emissive.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\13. Lighting_Emissive.fx",
               "RelativeDocumentMoniker": "Shaders\\13. Lighting_Emissive.fx",
@@ -1026,7 +1039,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "pch.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\pch.h",
               "RelativeDocumentMoniker": "Engine\\pch.h",
@@ -1038,7 +1051,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "15. EmissiveDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\15. EmissiveDemo.h",
               "RelativeDocumentMoniker": "Client\\15. EmissiveDemo.h",
@@ -1050,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "14. SpecularDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\14. SpecularDemo.h",
               "RelativeDocumentMoniker": "Client\\14. SpecularDemo.h",
@@ -1062,7 +1075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "12. Lighting_Specular.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\12. Lighting_Specular.fx",
               "RelativeDocumentMoniker": "Shaders\\12. Lighting_Specular.fx",
@@ -1074,7 +1087,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "13. DiffuseDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\13. DiffuseDemo.h",
               "RelativeDocumentMoniker": "Client\\13. DiffuseDemo.h",
@@ -1086,7 +1099,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "11. Lighting_Diffuse.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\11. Lighting_Diffuse.fx",
               "RelativeDocumentMoniker": "Shaders\\11. Lighting_Diffuse.fx",
@@ -1098,7 +1111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "CameraScript.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\CameraScript.h",
               "RelativeDocumentMoniker": "Client\\CameraScript.h",
@@ -1110,7 +1123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "10. Lighting_Ambient.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\10. Lighting_Ambient.fx",
               "RelativeDocumentMoniker": "Shaders\\10. Lighting_Ambient.fx",
@@ -1122,7 +1135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "12. AmbientDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\12. AmbientDemo.h",
               "RelativeDocumentMoniker": "Client\\12. AmbientDemo.h",
@@ -1134,7 +1147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 94,
               "Title": "09. GlobalTestShader.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\09. GlobalTestShader.fx",
               "RelativeDocumentMoniker": "Shaders\\09. GlobalTestShader.fx",
@@ -1146,7 +1159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 95,
               "Title": "11. DepthStencilDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\11. DepthStencilDemo.h",
               "RelativeDocumentMoniker": "Client\\11. DepthStencilDemo.h",
@@ -1158,7 +1171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 96,
               "Title": "10. GlobalTestDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\10. GlobalTestDemo.h",
               "RelativeDocumentMoniker": "Client\\10. GlobalTestDemo.h",
@@ -1170,7 +1183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 100,
               "Title": "Texture.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Texture.h",
               "RelativeDocumentMoniker": "Engine\\Texture.h",
@@ -1182,7 +1195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 97,
               "Title": "01. Triangle.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\01. Triangle.fx",
               "RelativeDocumentMoniker": "Shaders\\01. Triangle.fx",
@@ -1194,7 +1207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 99,
               "Title": "08. Mesh.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\08. Mesh.fx",
               "RelativeDocumentMoniker": "Shaders\\08. Mesh.fx",
@@ -1206,7 +1219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 101,
               "Title": "ResourceBase.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\ResourceBase.cpp",
               "RelativeDocumentMoniker": "Engine\\ResourceBase.cpp",
@@ -1218,7 +1231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 102,
               "Title": "GameObject.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\GameObject.h",
               "RelativeDocumentMoniker": "Engine\\GameObject.h",
@@ -1230,7 +1243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 103,
               "Title": "Component.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Component.h",
               "RelativeDocumentMoniker": "Engine\\Component.h",
@@ -1242,7 +1255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 107,
               "Title": "08. NormalDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\08. NormalDemo.h",
               "RelativeDocumentMoniker": "Client\\08. NormalDemo.h",
@@ -1254,7 +1267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 106,
               "Title": "07. Normal.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\07. Normal.fx",
               "RelativeDocumentMoniker": "Shaders\\07. Normal.fx",
@@ -1266,7 +1279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 108,
               "Title": "06. Terrain.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\06. Terrain.fx",
               "RelativeDocumentMoniker": "Shaders\\06. Terrain.fx",
@@ -1278,7 +1291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 110,
               "Title": "05. Sampler.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\05. Sampler.fx",
               "RelativeDocumentMoniker": "Shaders\\05. Sampler.fx",
@@ -1290,7 +1303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 109,
               "Title": "07. HeightMapDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\07. HeightMapDemo.h",
               "RelativeDocumentMoniker": "Client\\07. HeightMapDemo.h",
@@ -1302,7 +1315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 111,
               "Title": "06. SamplerDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\06. SamplerDemo.h",
               "RelativeDocumentMoniker": "Client\\06. SamplerDemo.h",
@@ -1314,7 +1327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 113,
               "Title": "05. TextureDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\05. TextureDemo.h",
               "RelativeDocumentMoniker": "Client\\05. TextureDemo.h",
@@ -1326,7 +1339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 114,
               "Title": "04. Texture.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\04. Texture.fx",
               "RelativeDocumentMoniker": "Shaders\\04. Texture.fx",
@@ -1338,7 +1351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 115,
               "Title": "Geometry.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Geometry.h",
               "RelativeDocumentMoniker": "Engine\\Geometry.h",
@@ -1350,7 +1363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 116,
               "Title": "04. CameraDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\04. CameraDemo.h",
               "RelativeDocumentMoniker": "Client\\04. CameraDemo.h",
@@ -1362,7 +1375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 118,
               "Title": "03. ConstantBuffer.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\03. ConstantBuffer.fx",
               "RelativeDocumentMoniker": "Shaders\\03. ConstantBuffer.fx",
@@ -1374,7 +1387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 120,
               "Title": "Monobehaviour.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Monobehaviour.h",
               "RelativeDocumentMoniker": "Engine\\Monobehaviour.h",
@@ -1386,7 +1399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 121,
               "Title": "02. QuadDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\02. QuadDemo.cpp",
               "RelativeDocumentMoniker": "Client\\02. QuadDemo.cpp",
@@ -1398,7 +1411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 122,
               "Title": "03. ConstantBufferDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\03. ConstantBufferDemo.h",
               "RelativeDocumentMoniker": "Client\\03. ConstantBufferDemo.h",
@@ -1410,7 +1423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 126,
               "Title": "IndexBuffer.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\IndexBuffer.h",
               "RelativeDocumentMoniker": "Engine\\IndexBuffer.h",
@@ -1422,7 +1435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 129,
               "Title": "IndexBuffer.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\IndexBuffer.cpp",
               "RelativeDocumentMoniker": "Engine\\IndexBuffer.cpp",
@@ -1434,7 +1447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 130,
               "Title": "VertexBuffer.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\VertexBuffer.h",
               "RelativeDocumentMoniker": "Engine\\VertexBuffer.h",
@@ -1446,7 +1459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 131,
               "Title": "IExecute.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\IExecute.h",
               "RelativeDocumentMoniker": "Engine\\IExecute.h",
@@ -1458,7 +1471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 132,
               "Title": "IExecute.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\IExecute.cpp",
               "RelativeDocumentMoniker": "Engine\\IExecute.cpp",
@@ -1470,7 +1483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 133,
               "Title": "Texture.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Texture.cpp",
               "RelativeDocumentMoniker": "Engine\\Texture.cpp",
@@ -1482,7 +1495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 134,
               "Title": "TimeManager.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\TimeManager.cpp",
               "RelativeDocumentMoniker": "Engine\\TimeManager.cpp",
@@ -1494,7 +1507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 136,
+              "DocumentIndex": 137,
               "Title": "Utils.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Utils.h",
               "RelativeDocumentMoniker": "Engine\\Utils.h",
@@ -1506,7 +1519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 138,
+              "DocumentIndex": 139,
               "Title": "Utils.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Utils.cpp",
               "RelativeDocumentMoniker": "Engine\\Utils.cpp",
@@ -1518,7 +1531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 139,
+              "DocumentIndex": 140,
               "Title": "02. QuadDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\02. QuadDemo.h",
               "RelativeDocumentMoniker": "Client\\02. QuadDemo.h",
@@ -1530,7 +1543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 140,
+              "DocumentIndex": 141,
               "Title": "EnginePch.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\EnginePch.h",
               "RelativeDocumentMoniker": "Engine\\EnginePch.h",
@@ -1542,7 +1555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 141,
+              "DocumentIndex": 142,
               "Title": "01. TriangleDemo.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\01. TriangleDemo.h",
               "RelativeDocumentMoniker": "Client\\01. TriangleDemo.h",
@@ -1564,13 +1577,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "myQuaternion.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.cpp",
               "RelativeDocumentMoniker": "MyMath\\myQuaternion.cpp",
-              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.cpp*",
-              "RelativeToolTip": "MyMath\\myQuaternion.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.cpp",
+              "RelativeToolTip": "MyMath\\myQuaternion.cpp",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAkwCYBAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-03T09:06:08.743Z",
               "EditorCaption": ""
@@ -1578,45 +1591,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "myEulerAngles.cpp",
-              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myEulerAngles.cpp",
-              "RelativeDocumentMoniker": "MyMath\\myEulerAngles.cpp",
-              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myEulerAngles.cpp",
-              "RelativeToolTip": "MyMath\\myEulerAngles.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Title": "MyMathTester.cpp",
+              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\MyMathTester.cpp",
+              "RelativeDocumentMoniker": "MyMathTester\\MyMathTester.cpp",
+              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\MyMathTester.cpp",
+              "RelativeToolTip": "MyMathTester\\MyMathTester.cpp",
+              "ViewState": "AgIAAN8AAAAAAAAAAAAkwOgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-03T08:45:40.932Z",
+              "WhenOpened": "2025-09-03T04:03:48.425Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "myMatrix3x3.cpp",
-              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myMatrix3x3.cpp",
-              "RelativeDocumentMoniker": "MyMath\\myMatrix3x3.cpp",
-              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myMatrix3x3.cpp",
-              "RelativeToolTip": "MyMath\\myMatrix3x3.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-03T06:12:05.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "myVec3.cpp",
-              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec3.cpp",
-              "RelativeDocumentMoniker": "MyMath\\myVec3.cpp",
-              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec3.cpp",
-              "RelativeToolTip": "MyMath\\myVec3.cpp",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAIUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-03T03:58:54.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "myVec4.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec4.cpp",
               "RelativeDocumentMoniker": "MyMath\\myVec4.cpp",
@@ -1628,7 +1615,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
+              "Title": "myEulerAngles.cpp",
+              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myEulerAngles.cpp",
+              "RelativeDocumentMoniker": "MyMath\\myEulerAngles.cpp",
+              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myEulerAngles.cpp",
+              "RelativeToolTip": "MyMath\\myEulerAngles.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-03T08:45:40.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MathUtils.h",
+              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\MathUtils.h",
+              "RelativeDocumentMoniker": "MyMath\\MathUtils.h",
+              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\MathUtils.h",
+              "RelativeToolTip": "MyMath\\MathUtils.h",
+              "ViewState": "AgIAAA0AAAAAAAAAAAArwDAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-03T04:53:23.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "myVec3.cpp",
+              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec3.cpp",
+              "RelativeDocumentMoniker": "MyMath\\myVec3.cpp",
+              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myVec3.cpp",
+              "RelativeToolTip": "MyMath\\myVec3.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-03T03:58:54.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "myMatrix3x3.cpp",
+              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myMatrix3x3.cpp",
+              "RelativeDocumentMoniker": "MyMath\\myMatrix3x3.cpp",
+              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myMatrix3x3.cpp",
+              "RelativeToolTip": "MyMath\\myMatrix3x3.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-03T06:12:05.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "TesterPch.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\TesterPch.cpp",
               "RelativeDocumentMoniker": "MyMathTester\\TesterPch.cpp",
@@ -1640,19 +1676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MyMathTester.cpp",
-              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\MyMathTester.cpp",
-              "RelativeDocumentMoniker": "MyMathTester\\MyMathTester.cpp",
-              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\MyMathTester.cpp",
-              "RelativeToolTip": "MyMathTester\\MyMathTester.cpp",
-              "ViewState": "AgIAAE8AAAAAAAAAAAArwKsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-03T04:03:48.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "myMatrix4x4.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myMatrix4x4.cpp",
               "RelativeDocumentMoniker": "MyMath\\myMatrix4x4.cpp",
@@ -1664,7 +1688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "TesterPch.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMathTester\\TesterPch.h",
               "RelativeDocumentMoniker": "MyMathTester\\TesterPch.h",
@@ -1676,7 +1700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "correct_math.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\correct_math.h",
               "RelativeDocumentMoniker": "MyMath\\correct_math.h",
@@ -1688,19 +1712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "MathUtils.h",
-              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\MathUtils.h",
-              "RelativeDocumentMoniker": "MyMath\\MathUtils.h",
-              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\MathUtils.h",
-              "RelativeToolTip": "MyMath\\MathUtils.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-03T04:53:23.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "assert.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\assert.h",
               "RelativeDocumentMoniker": "MyMath\\assert.h",
@@ -1712,7 +1724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "Mesh.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Mesh.cpp",
               "RelativeDocumentMoniker": "Engine\\Mesh.cpp",
@@ -1724,7 +1736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "RenderManager.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\RenderManager.cpp",
               "RelativeDocumentMoniker": "Engine\\RenderManager.cpp",
@@ -1736,7 +1748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Define.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Define.h",
               "RelativeDocumentMoniker": "Engine\\Define.h",
@@ -1748,7 +1760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Camera.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Camera.cpp",
               "RelativeDocumentMoniker": "Engine\\Camera.cpp",
@@ -1760,7 +1772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "09. MeshDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\09. MeshDemo.cpp",
               "RelativeDocumentMoniker": "Client\\09. MeshDemo.cpp",
@@ -1772,7 +1784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "18. NormalMappingDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\18. NormalMappingDemo.cpp",
               "RelativeDocumentMoniker": "Client\\18. NormalMappingDemo.cpp",
@@ -1784,7 +1796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "Types.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Types.h",
               "RelativeDocumentMoniker": "Engine\\Types.h",
@@ -1796,7 +1808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "GeometryHelper.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\GeometryHelper.cpp",
               "RelativeDocumentMoniker": "Engine\\GeometryHelper.cpp",
@@ -1808,7 +1820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "ResourceManager.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\ResourceManager.cpp",
               "RelativeDocumentMoniker": "Engine\\ResourceManager.cpp",
@@ -1820,7 +1832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "VertexData.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\VertexData.cpp",
               "RelativeDocumentMoniker": "Engine\\VertexData.cpp",
@@ -1832,7 +1844,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "GeometryHelper.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Libraries\\Include\\Engine\\GeometryHelper.h",
               "RelativeDocumentMoniker": "Libraries\\Include\\Engine\\GeometryHelper.h",
@@ -1844,7 +1856,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "Texture.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Texture.cpp",
               "RelativeDocumentMoniker": "Engine\\Texture.cpp",
@@ -1856,7 +1868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 146,
+              "DocumentIndex": 147,
               "Title": "ResourceManager.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Libraries\\Include\\Engine\\ResourceManager.h",
               "RelativeDocumentMoniker": "Libraries\\Include\\Engine\\ResourceManager.h",
@@ -1868,7 +1880,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "17. MaterialDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\17. MaterialDemo.cpp",
               "RelativeDocumentMoniker": "Client\\17. MaterialDemo.cpp",
@@ -1880,7 +1892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\Main.cpp",
               "RelativeDocumentMoniker": "Client\\Main.cpp",
@@ -1892,7 +1904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "Material.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Material.cpp",
               "RelativeDocumentMoniker": "Engine\\Material.cpp",
@@ -1904,7 +1916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "16. LightingDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\16. LightingDemo.cpp",
               "RelativeDocumentMoniker": "Client\\16. LightingDemo.cpp",
@@ -1916,7 +1928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "14. SpecularDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\14. SpecularDemo.cpp",
               "RelativeDocumentMoniker": "Client\\14. SpecularDemo.cpp",
@@ -1928,7 +1940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "15. EmissiveDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\15. EmissiveDemo.cpp",
               "RelativeDocumentMoniker": "Client\\15. EmissiveDemo.cpp",
@@ -1940,7 +1952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "13. DiffuseDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\13. DiffuseDemo.cpp",
               "RelativeDocumentMoniker": "Client\\13. DiffuseDemo.cpp",
@@ -1952,7 +1964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "12. AmbientDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\12. AmbientDemo.cpp",
               "RelativeDocumentMoniker": "Client\\12. AmbientDemo.cpp",
@@ -1964,7 +1976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "11. DepthStencilDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\11. DepthStencilDemo.cpp",
               "RelativeDocumentMoniker": "Client\\11. DepthStencilDemo.cpp",
@@ -1976,7 +1988,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "10. GlobalTestDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\10. GlobalTestDemo.cpp",
               "RelativeDocumentMoniker": "Client\\10. GlobalTestDemo.cpp",
@@ -1988,7 +2000,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 145,
+              "DocumentIndex": 146,
               "Title": "MeshRenderer.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Libraries\\Include\\Engine\\MeshRenderer.h",
               "RelativeDocumentMoniker": "Libraries\\Include\\Engine\\MeshRenderer.h",
@@ -2000,7 +2012,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "pch.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\pch.cpp",
               "RelativeDocumentMoniker": "Client\\pch.cpp",
@@ -2012,7 +2024,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "GameObject.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\GameObject.cpp",
               "RelativeDocumentMoniker": "Engine\\GameObject.cpp",
@@ -2024,7 +2036,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "MeshRenderer.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\MeshRenderer.cpp",
               "RelativeDocumentMoniker": "Engine\\MeshRenderer.cpp",
@@ -2036,7 +2048,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "RenderManager.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Libraries\\Include\\Engine\\RenderManager.h",
               "RelativeDocumentMoniker": "Libraries\\Include\\Engine\\RenderManager.h",
@@ -2048,7 +2060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "Game.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Game.cpp",
               "RelativeDocumentMoniker": "Engine\\Game.cpp",
@@ -2060,7 +2072,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "08. NormalDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\08. NormalDemo.cpp",
               "RelativeDocumentMoniker": "Client\\08. NormalDemo.cpp",
@@ -2072,7 +2084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "03. ConstantBufferDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\03. ConstantBufferDemo.cpp",
               "RelativeDocumentMoniker": "Client\\03. ConstantBufferDemo.cpp",
@@ -2084,7 +2096,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "05. TextureDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\05. TextureDemo.cpp",
               "RelativeDocumentMoniker": "Client\\05. TextureDemo.cpp",
@@ -2096,7 +2108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "06. SamplerDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\06. SamplerDemo.cpp",
               "RelativeDocumentMoniker": "Client\\06. SamplerDemo.cpp",
@@ -2108,7 +2120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "07. HeightMapDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\07. HeightMapDemo.cpp",
               "RelativeDocumentMoniker": "Client\\07. HeightMapDemo.cpp",
@@ -2120,7 +2132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "CameraScript.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\CameraScript.cpp",
               "RelativeDocumentMoniker": "Client\\CameraScript.cpp",
@@ -2132,7 +2144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "EnginePch.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\EnginePch.h",
               "RelativeDocumentMoniker": "Engine\\EnginePch.h",
@@ -2144,7 +2156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "pch.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\pch.cpp",
               "RelativeDocumentMoniker": "Engine\\pch.cpp",
@@ -2156,7 +2168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 144,
+              "DocumentIndex": 145,
               "Title": "d3dx11effect.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Libraries\\Include\\FX11\\d3dx11effect.h",
               "RelativeDocumentMoniker": "Libraries\\Include\\FX11\\d3dx11effect.h",
@@ -2168,7 +2180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "ConstantBuffer.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\ConstantBuffer.h",
               "RelativeDocumentMoniker": "Engine\\ConstantBuffer.h",
@@ -2180,7 +2192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "Graphics.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Graphics.cpp",
               "RelativeDocumentMoniker": "Engine\\Graphics.cpp",
@@ -2192,7 +2204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 98,
               "Title": "01. TriangleDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\01. TriangleDemo.cpp",
               "RelativeDocumentMoniker": "Client\\01. TriangleDemo.cpp",
@@ -2204,7 +2216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 143,
+              "DocumentIndex": 144,
               "Title": "memory",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\memory",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\memory",
@@ -2216,7 +2228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 104,
               "Title": "Component.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Component.cpp",
               "RelativeDocumentMoniker": "Engine\\Component.cpp",
@@ -2228,7 +2240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 105,
               "Title": "VertexBuffer.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\VertexBuffer.h",
               "RelativeDocumentMoniker": "Engine\\VertexBuffer.h",
@@ -2240,7 +2252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 112,
               "Title": "Technique.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Technique.h",
               "RelativeDocumentMoniker": "Engine\\Technique.h",
@@ -2252,7 +2264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 117,
               "Title": "04. CameraDemo.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Client\\04. CameraDemo.cpp",
               "RelativeDocumentMoniker": "Client\\04. CameraDemo.cpp",
@@ -2264,7 +2276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 119,
               "Title": "Monobehaviour.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Monobehaviour.cpp",
               "RelativeDocumentMoniker": "Engine\\Monobehaviour.cpp",
@@ -2276,7 +2288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 123,
               "Title": "02. Quad.fx",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Shaders\\02. Quad.fx",
               "RelativeDocumentMoniker": "Shaders\\02. Quad.fx",
@@ -2288,7 +2300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 125,
               "Title": "VertexBuffer.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\VertexBuffer.cpp",
               "RelativeDocumentMoniker": "Engine\\VertexBuffer.cpp",
@@ -2300,7 +2312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 124,
               "Title": "ConstantBuffer.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\ConstantBuffer.cpp",
               "RelativeDocumentMoniker": "Engine\\ConstantBuffer.cpp",
@@ -2312,7 +2324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 127,
               "Title": "IndexBuffer.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\IndexBuffer.cpp",
               "RelativeDocumentMoniker": "Engine\\IndexBuffer.cpp",
@@ -2324,7 +2336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 128,
               "Title": "Geometry.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Geometry.cpp",
               "RelativeDocumentMoniker": "Engine\\Geometry.cpp",
@@ -2336,7 +2348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 142,
+              "DocumentIndex": 143,
               "Title": "ResourceBase.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Libraries\\Include\\Engine\\ResourceBase.h",
               "RelativeDocumentMoniker": "Libraries\\Include\\Engine\\ResourceBase.h",
@@ -2348,7 +2360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 135,
               "Title": "InputManager.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\InputManager.cpp",
               "RelativeDocumentMoniker": "Engine\\InputManager.cpp",
@@ -2360,7 +2372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 136,
               "Title": "Utils.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Utils.cpp",
               "RelativeDocumentMoniker": "Engine\\Utils.cpp",
@@ -2372,7 +2384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 137,
+              "DocumentIndex": 138,
               "Title": "Technique.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\Technique.cpp",
               "RelativeDocumentMoniker": "Engine\\Technique.cpp",
