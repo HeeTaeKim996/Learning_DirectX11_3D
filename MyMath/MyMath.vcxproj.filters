@@ -4,37 +4,68 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{6c70560b-1e9b-42bd-9d67-ef136afcb358}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Basis">
+      <UniqueIdentifier>{1f875376-c253-4c78-b10f-5e6d09490c9f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Utils</Filter>
     </ClCompile>
-    <ClCompile Include="myVec3.cpp" />
-    <ClCompile Include="myMatrix3x3.cpp" />
-    <ClCompile Include="myVec4.cpp" />
-    <ClCompile Include="myMatrix4x4.cpp" />
-    <ClCompile Include="myEulerAngles.cpp" />
-    <ClCompile Include="myQuaternion.cpp" />
+    <ClCompile Include="myEulerAngles.cpp">
+      <Filter>Basis</Filter>
+    </ClCompile>
+    <ClCompile Include="myMatrix3x3.cpp">
+      <Filter>Basis</Filter>
+    </ClCompile>
+    <ClCompile Include="myMatrix4x4.cpp">
+      <Filter>Basis</Filter>
+    </ClCompile>
+    <ClCompile Include="myQuaternion.cpp">
+      <Filter>Basis</Filter>
+    </ClCompile>
+    <ClCompile Include="myVec3.cpp">
+      <Filter>Basis</Filter>
+    </ClCompile>
+    <ClCompile Include="myVec4.cpp">
+      <Filter>Basis</Filter>
+    </ClCompile>
+    <ClCompile Include="TransformBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="myVec3.h" />
     <ClInclude Include="assert.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="CoreDefenition.h" />
     <ClInclude Include="correct_math.h">
       <Filter>Utils</Filter>
     </ClInclude>
     <ClInclude Include="MathUtils.h">
       <Filter>Utils</Filter>
     </ClInclude>
-    <ClInclude Include="myMatrix3x3.h" />
-    <ClInclude Include="myVec4.h" />
-    <ClInclude Include="myMatrix4x4.h" />
-    <ClInclude Include="myEulerAngles.h" />
-    <ClInclude Include="myQuaternion.h" />
+    <ClInclude Include="CoreDefenition.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="myEulerAngles.h">
+      <Filter>Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="myMatrix3x3.h">
+      <Filter>Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="myMatrix4x4.h">
+      <Filter>Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="myQuaternion.h">
+      <Filter>Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="myVec3.h">
+      <Filter>Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="myVec4.h">
+      <Filter>Basis</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformBase.h" />
   </ItemGroup>
 </Project>

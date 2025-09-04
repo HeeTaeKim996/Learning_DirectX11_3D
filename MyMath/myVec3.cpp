@@ -6,6 +6,8 @@
 const myVec3 myVec3::UnitX = myVec3(1, 0, 0);
 const myVec3 myVec3::UnitY = myVec3(0, 1, 0);
 const myVec3 myVec3::UnitZ = myVec3(0, 0, 1);
+const myVec3 myVec3::One = myVec3(1, 1, 1);
+const myVec3 myVec3::Zero = myVec3(0, 0, 0);
 
 
 myVec3 myVec3::operator+(const myVec3& InVector) const
@@ -86,6 +88,11 @@ myVec3& myVec3::operator*=(const myMatrix3x3 InMatrix)
 
 	*this = ret;
 	return *this;
+}
+
+myVec3 myVec3::operator*(const myVec3& InVector) const
+{
+	return myVec3(X * InVector.X, Y * InVector.Y, Z * InVector.Z);
 }
 
 

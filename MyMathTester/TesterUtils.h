@@ -7,6 +7,8 @@
 #include "myMatrix4x4.h"
 #include "myEulerAngles.h"
 #include "myQuaternion.h"
+#include "TransformBase.h"
+#include "TesterUtils.h"
 
 using namespace std;
 
@@ -29,4 +31,22 @@ static void PrintEulerAngles(myEulerAngles euler)
 {
 	cout << "Yaw : " << euler.Yaw << "/  Pitch : " << euler.Pitch << "/  Roll : " << euler.Roll << endl;
 	printf("\n");
+}
+
+
+static void PrintVec3(myVec3 vec3)
+{
+	cout << vec3.X << "  /   " << vec3.Y << "  /   " << vec3.Z << endl;
+}
+
+static void PrintTransformBase(TransformBase transformBase)
+{
+	cout << "S" << endl;
+	PrintVec3(transformBase.GetScale());
+
+	cout << "R" << endl;
+	PritQuaternion(transformBase.GetRotation());
+
+	cout << "T" << endl;
+	PrintVec3(transformBase.GetPosition());
 }

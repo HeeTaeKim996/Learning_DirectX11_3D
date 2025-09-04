@@ -8,6 +8,7 @@
 #include "myEulerAngles.h"
 #include "myQuaternion.h"
 #include "TesterUtils.h"
+#include "TransformBase.h"
 
 using namespace std;
 
@@ -295,6 +296,50 @@ void TestQuaternion()
 
 
 
+void TestTransformBase()
+{
+    if (0) // Reg Test
+    {
+        TransformBase localTransform(myVec3(2, 1, 3), myQuaternion(myVec3(12.f, 24.f, 36.f)), myVec3(5, 6, 7));
+        cout << "StartLocalTransform" << endl;
+        PrintTransformBase(localTransform);
+
+        TransformBase parentTransform(myVec3(5, 2, 7), myQuaternion(myVec3(40.f, 52.f, 20.f)), myVec3(1, 4, 3));
+
+        TransformBase worldTransform = localTransform.LocalToWorld(parentTransform);
+        cout << "WorldTransform" << endl;
+        PrintTransformBase(worldTransform);
+
+        TransformBase regLocalTransform = worldTransform.WorldToLocal(parentTransform);
+        cout << "RegLocalTransform" << endl;
+        PrintTransformBase(regLocalTransform);
+    }
+
+
+    if (0) // 월드 변환 잘됐는지 확인 테스트
+    {
+        cout << "월드 변환 잘됐는지 확인하는 코드" << endl;
+        TransformBase localTransform(myVec3(1, 0, 0));
+
+        TransformBase parentTransform(myVec3(0, 0, 0), myQuaternion(myVec3(90.f, 0, 0)), myVec3(1, 1, 1));
+
+        TransformBase worldTrnasform = localTransform.LocalToWorld(parentTransform);
+        PrintTransformBase(worldTrnasform);
+    }
+
+
+    if (1) // Add 회전축 테스트
+    {
+        cout << "AddRot 으로 잘 회전되는지 확인하는 코드" << endl;
+        TransformBase transform(myVec3(1, 0, 0));
+
+        transform.AddYawRotation(90.f);
+
+        PrintTransformBase(transform);
+    }
+}
+
+
 int main()
 {
     //TestVec3();
@@ -303,6 +348,7 @@ int main()
 
     //TestVec4Matrix4x4();
 
-    TestQuaternion();
+    //TestQuaternion();
 
+    TestTransformBase();
 }

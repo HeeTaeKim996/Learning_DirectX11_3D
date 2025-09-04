@@ -26,6 +26,10 @@ public:
 	myVec3 operator*(const myMatrix3x3 InMatrix) const;
 	myVec3& operator*=(const myMatrix3x3 InMatrix);
 
+	myVec3 operator-() const { return myVec3(-X, -Y, -Z); }
+	myVec3 operator*(const myVec3& InVector) const;
+	
+
 	// ¸â¹öÇÔ¼ö
 	float Size() const;
 	float SizeSquared() const;
@@ -40,6 +44,8 @@ public:
 	const static myVec3 UnitX;
 	const static myVec3 UnitY;
 	const static myVec3 UnitZ;
+	const static myVec3 One;
+	const static myVec3 Zero;
 
 	
 public:	
