@@ -60,7 +60,6 @@ void myQuaternion::FromEulerAngles(const myEulerAngles& InEulerAngles)
 	X = cy * cr * sp - cp * sy * sr;
 	Y = cp * cr * sy + cy * sp * sr;
 	Z = cy * cp * sr + cr * sy * sp;
-
 #else
 	assert(0); // 플래그 최소 1개 필요
 #endif
@@ -196,7 +195,8 @@ myVec3 myQuaternion::operator*(const myVec3& InVector) const
 	return RotateVector(InVector);
 }
 
-myQuaternion myQuaternion::Slerp(myQuaternion startQuaternion, myQuaternion endQuaternion, float InRatio)
+myQuaternion& myQuaternion::Slerp(const myQuaternion& startQuaternion, myQuaternion endQuaternion,
+	float InRatio)
 {
 	// 사원수의 내적 구하기
 	float dot = startQuaternion.X * endQuaternion.X + startQuaternion.Y * endQuaternion.Y
@@ -230,13 +230,12 @@ myQuaternion myQuaternion::Slerp(myQuaternion startQuaternion, myQuaternion endQ
 		beta = sinf(InRatio * theta) * invSin;
 	}
 
-	myQuaternion result;
-	result.X = alpha * startQuaternion.X + beta * endQuaternion.X;
-	result.Y = alpha * startQuaternion.Y + beta * endQuaternion.Y;
-	result.Z = alpha * startQuaternion.Z + beta * endQuaternion.Z;
-	result.W = alpha * startQuaternion.W + beta * endQuaternion.W;
+	X = alpha * startQuaternion.X + beta * endQuaternion.X;
+	Y = alpha * startQuaternion.Y + beta * endQuaternion.Y;
+	Z = alpha * startQuaternion.Z + beta * endQuaternion.Z;
+	W = alpha * startQuaternion.W + beta * endQuaternion.W;
 
-	return result;
+	return *this;
 }
 
 myVec3 myQuaternion::RotateVector(const myVec3& v) const
@@ -306,7 +305,10 @@ myEulerAngles myQuaternion::ToEulerAngles() const
 
 myMatrix3x3 myQuaternion::ToRotateMatrix() const
 {
-	return myMatrix3x3(RotateVector(myVec3(1, 0, 0)), RotateVector(myVec3(0, 1, 0)), RotateVector(myVec3(0, 0, 1)));
+	return myMatrix3x3(
+		RotateVector(myVec3(1, 0, 0)), 
+		RotateVector(myVec3(0, 1, 0)), 
+		RotateVector(myVec3(0, 0, 1)));
 }
 
 

@@ -21,7 +21,7 @@ static void PrintMatrix3x3(myMatrix3x3 matrix)
 	printf("\n");
 }
 
-static void PritQuaternion(myQuaternion quat)
+static void PrintQuaternion(myQuaternion quat)
 {
 	cout << quat.W << "  /   " << quat.X << "  /   " << quat.Y << "  /   " << quat.Z << endl;
 	printf("\n");
@@ -45,7 +45,7 @@ static void PrintTransformBase(TransformBase transformBase)
 	PrintVec3(transformBase.GetScale());
 
 	cout << "R" << endl;
-	PritQuaternion(transformBase.GetRotation());
+	PrintQuaternion(transformBase.GetRotation());
 
 	cout << "T" << endl;
 	PrintVec3(transformBase.GetPosition());

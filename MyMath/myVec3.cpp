@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "myVec3.h"
 #include "myMatrix3x3.h"
-
+#include "myVec4.h"
 
 const myVec3 myVec3::UnitX = myVec3(1, 0, 0);
 const myVec3 myVec3::UnitY = myVec3(0, 1, 0);
@@ -141,4 +141,9 @@ myVec3 myVec3::Cross(const myVec3& InVector) const
 		Z * InVector.X - X * InVector.Z,
 		X * InVector.Y - Y * InVector.X
 	);
+}
+
+myVec4 myVec3::ToVec4(int lastValue)
+{
+	return myVec4(X, Y, Z, lastValue);
 }

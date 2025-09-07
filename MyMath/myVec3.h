@@ -1,6 +1,7 @@
 #pragma once
 
 class myMatrix3x3;
+class myVec4;
 
 class myVec3
 {
@@ -38,6 +39,8 @@ public:
 	float Dot(const myVec3& InVector) const;
 	myVec3 Cross(const myVec3& InVector) const;
 
+
+	myVec4 ToVec4(int lastValue = 0);
 
 public:
 	// static

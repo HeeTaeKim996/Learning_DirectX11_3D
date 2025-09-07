@@ -83,7 +83,7 @@ void MeshRenderer::Update()
 	_material->Update();
 
 
-	Matrix world = GetTransform()->GetWorldMatrix();
+	Matrix world = GetTransform()->GetSRT();
 	RENDER->PushTransformData(TransformDesc{ world });
 
 	uint32 stride = _mesh->GetVertexBuffer()->GetStride();

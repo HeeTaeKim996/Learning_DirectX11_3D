@@ -1,12 +1,13 @@
 #pragma once
 
+class myVec3;
 
 class myEulerAngles
 {
 public:
 	// 생성자
 	myEulerAngles();
-	myEulerAngles(float InYaw, float InPitch, float InRoll) : Yaw(InYaw), Pitch(InPitch), Roll(InRoll) {}
+	myEulerAngles(float InPitch, float InYaw, float InRoll) : Pitch(InPitch), Yaw(InYaw), Roll(InRoll) {}
 
 	// 함수
 	void Clamp();
@@ -15,11 +16,12 @@ public:
 
 	const static myEulerAngles Identity;
 
+	myVec3 ToVec3();
 
 public:
 	// 멤버 
-	float Yaw;
 	float Pitch;
+	float Yaw;
 	float Roll;
 };
 

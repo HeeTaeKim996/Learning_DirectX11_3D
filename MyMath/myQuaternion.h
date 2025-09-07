@@ -30,7 +30,7 @@ public:
 	myQuaternion operator*(const myQuaternion& InQuaternion) const;
 	myQuaternion operator*=(const myQuaternion& InQuaternion);
 	myVec3 operator*(const myVec3& InVector) const;
-	static myQuaternion Slerp(myQuaternion startQuaternion, myQuaternion endQuaternion,
+	myQuaternion& Slerp(const myQuaternion& startQuaternion, myQuaternion endQuaternion,
 		float InRatio);
 
 

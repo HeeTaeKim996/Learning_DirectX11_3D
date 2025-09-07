@@ -3,6 +3,7 @@
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\correct_math.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\MathUtils.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myEulerAngles.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\MyMath.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myMatrix3x3.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myMatrix4x4.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myQuaternion.h
@@ -10,6 +11,6 @@
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\myVec4.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\pch.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMath\TransformBase.h
-  12개 파일이 복사되었습니다.
-  TransformBase.cpp
-  MyMath.vcxproj -> C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\MyMathTester\Libs\Libraries\Debug\MyMath.lib
+  13개 파일이 복사되었습니다.
+  myMatrix4x4.cpp
+  MyMath.vcxproj -> C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Libraries\Lib\MyMath\Debug\MyMath.lib

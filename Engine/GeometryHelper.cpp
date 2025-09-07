@@ -163,9 +163,9 @@ void GeometryHelper::CreateSphere(shared_ptr<Geometry<VertexTextureData>> geomet
 		{
 			float theta = x * sliceAngle;
 
-			v.position.x = radius * sinf(phi) * cosf(theta);
-			v.position.z = radius * sinf(phi) * sinf(theta);
-			v.position.y = radius * cosf(phi);
+			v.position.X = radius * sinf(phi) * cosf(theta);
+			v.position.Z = radius * sinf(phi) * sinf(theta);
+			v.position.Y = radius * cosf(phi);
 
 			v.uv = Vec2(deltaU * x, deltaV * y);
 			
@@ -462,9 +462,9 @@ void GeometryHelper::CreateSphere(shared_ptr<Geometry<VertexTextureNormalData>> 
 		{
 			float theta = x * sliceAngle;
 
-			v.position.x = radius * sinf(phi) * cosf(theta);
-			v.position.z = radius * sinf(phi) * sinf(theta);
-			v.position.y = radius * cosf(phi);
+			v.position.X = radius * sinf(phi) * cosf(theta);
+			v.position.Z = radius * sinf(phi) * sinf(theta);
+			v.position.Y = radius * cosf(phi);
 
 			v.uv = Vec2(deltaU * x, deltaV * y);
 
@@ -792,18 +792,18 @@ void GeometryHelper::CreateSphere(shared_ptr<Geometry<VertexTextureNormalTangent
 		{
 			float theta = x * sliceAngle;
 
-			v.position.x = radius * sinf(phi) * cosf(theta);
-			v.position.z = radius * sinf(phi) * sinf(theta);
-			v.position.y = radius * cosf(phi);
+			v.position.X = radius * sinf(phi) * cosf(theta);
+			v.position.Z = radius * sinf(phi) * sinf(theta);
+			v.position.Y = radius * cosf(phi);
 
 			v.uv = Vec2(deltaU * x, deltaV * y);
 
 			v.normal = v.position;
 			v.normal.Normalize();
 
-			v.tangent.x = -radius * sinf(phi) * sinf(theta);
-			v.tangent.y = 0.0f;
-			v.tangent.z = radius * sinf(phi) * cosf(theta);
+			v.tangent.X = -radius * sinf(phi) * sinf(theta);
+			v.tangent.Y = 0.0f;
+			v.tangent.Z = radius * sinf(phi) * cosf(theta);
 			v.tangent.Normalize();
 
 

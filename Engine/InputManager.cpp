@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "InputManager.h"
 
-#if 0
+#if 1
 void InputManager::Init(HWND hwnd)
 {
 	_hwnd = hwnd;
@@ -128,7 +128,7 @@ void InputManager::Update()
 
 
 
-#if 1 // First
+#if 0 // First
 void InputManager::Init(HWND hwnd)
 {
 	_hwnd = hwnd;

@@ -25,12 +25,17 @@ public:
 	void SetWidth(float value) { _width = value; }
 	void SetHeight(float value) { _height = value; }
 
-	Matrix& GetViewMatrix() { return _matView; }
-	Matrix& GetProjectionMatrix() { return _matProjection; }
+	
+	void SetViewMatrix();
+	void SetProjectionMatrix();
+	void SetVInvMatrix();
+
+
 
 private:
-	Matrix _matView = Matrix::Identity;
-	Matrix _matProjection = Matrix::Identity;
+	// [OBSOLATE]
+	//Matrix _matView = Matrix::Identity;
+	//Matrix _matProjection = Matrix::Identity;
 
 	float _near = 1.f;
 	float _far = 1000.f;

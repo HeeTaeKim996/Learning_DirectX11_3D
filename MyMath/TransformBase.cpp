@@ -65,44 +65,65 @@ TransformBase::TransformBase(const myMatrix4x4& InMatrix)
 
 
 
+//#define THIS_IS_NOT_QUATERNION_ROTATION_THIS_IS_SAME_AS_MATRIX_ROTATION
 void TransformBase::AddYawRotation(float InDegree)
 {
-#if 0 // 기존 강의 코드인데 왜 이렇게 했던 걸까
-	Rotator r = Rotation.ToRotator();
+#ifdef THIS_IS_NOT_QUATERNION_ROTATION_THIS_IS_SAME_AS_MATRIX_ROTATION // 기존 강의 코드인데 왜 이렇게 했던 걸까
+	myEulerAngles r = _rotation.ToEulerAngles();
 	r.Yaw += InDegree;
 	r.Clamp();
-	Rotation = Quaternion(r);
-#endif
-
-	myQuaternion addingYawQuat(myVec3::UnitY, InDegree);
+	_rotation = myQuaternion(r);
+#else
+	myQuaternion addingYawQuat(GetYAxis().GetNormalize(), InDegree);
 	_rotation *= addingYawQuat;
+#endif
 }
 
 void TransformBase::AddPitchRotation(float InDegree)
 {
-#if 0
-	Rotator r = Rotation.ToRotator();
+#ifdef THIS_IS_NOT_QUATERNION_ROTATION_THIS_IS_SAME_AS_MATRIX_ROTATION
+	myEulerAngles r = _rotation.ToEulerAngles();
 	r.Pitch += InDegree;
 	r.Clamp();
-	Rotation = Quaternion(r);
-#endif
-	myQuaternion addingPitchQuat(myVec3::UnitX, InDegree);
+	_rotation = myQuaternion(r);
+#else
+	myQuaternion addingPitchQuat(GetXAxis().GetNormalize(), InDegree);
 	_rotation *= addingPitchQuat;
+#endif
 }
 
 void TransformBase::AddRollRotation(float InDegree)
 {
-#if 0
-	Rotator r = Rotation.ToRotator();
+#ifdef THIS_IS_NOT_QUATERNION_ROTATION_THIS_IS_SAME_AS_MATRIX_ROTATION
+	myEulerAngles r = _rotation.ToEulerAngles();
 	r.Roll += InDegree;
 	r.Clamp();
-	Rotation = Quaternion(r);
+	_rotation = myQuaternion(r);
+#else
+	myQuaternion addingRollQuat(GetZAxis().GetNormalize(), InDegree);
+	_rotation *= addingRollQuat;
 #endif
+}
+
+void TransformBase::AddUnitXRotation(float InDegree)
+{
+	myQuaternion addingPitchQuat(myVec3::UnitX, InDegree);
+	_rotation *= addingPitchQuat;
+}
+
+void TransformBase::AddUnitYRotation(float InDegree)
+{
+	myQuaternion addingYawQuat(myVec3::UnitY, InDegree);
+	_rotation *= addingYawQuat;
+}
+
+void TransformBase::AddUnitZRotation(float InDegree)
+{
 	myQuaternion addingRollQuat(myVec3::UnitZ, InDegree);
 	_rotation *= addingRollQuat;
 }
 
-myMatrix4x4 TransformBase::GetMatrix() const
+myMatrix4x4 TransformBase::GetSRT() const
 {
 	return myMatrix4x4(
 		myVec4(GetXAxis() * _scale.X, 0),
@@ -110,6 +131,11 @@ myMatrix4x4 TransformBase::GetMatrix() const
 		myVec4(GetZAxis() * _scale.Z, 0),
 		myVec4(_position, 1)
 	);
+}
+
+myEulerAngles TransformBase::GetEulerAngles()
+{
+	return _rotation.ToEulerAngles();
 }
 
 TransformBase TransformBase::Inverse() const

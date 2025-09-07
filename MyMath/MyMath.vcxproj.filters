@@ -67,5 +67,6 @@
       <Filter>Basis</Filter>
     </ClInclude>
     <ClInclude Include="TransformBase.h" />
+    <ClInclude Include="MyMath.h" />
   </ItemGroup>
 </Project>

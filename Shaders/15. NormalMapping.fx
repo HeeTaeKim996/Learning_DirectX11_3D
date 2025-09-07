@@ -8,7 +8,10 @@ MeshOutput VS(VertexTextureNormalTanget input)
     MeshOutput output;
     output.position = mul(input.position, W);
     output.worldPosition = output.position.xyz; // 순서 주의. W 적용후의 pos
+
     output.position = mul(output.position, VP);
+    //output.position = mul(output.position, V);
+    //output.position = mul(output.position, P);
 
     output.uv = input.uv;
     output.normal = mul(input.normal, (float3x3) W); 

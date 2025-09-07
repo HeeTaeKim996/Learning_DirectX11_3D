@@ -76,6 +76,12 @@ using namespace Microsoft::WRL;
 #include "Texture.h"
 #include "Mesh.h"
 
+
+
+// MyMath
+#include "MyMath/MyMath.h"
+#pragma comment(lib, "MyMath.lib")
+#include "MyMathUtils.h"
 #endif
 
 

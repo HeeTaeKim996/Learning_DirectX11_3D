@@ -18,5 +18,11 @@ public:
 	shared_ptr<GameObject> _obj;
 	shared_ptr<GameObject> _obj2;
 	shared_ptr<GameObject> _camera;
+
+
+	// DEBUG
+	shared_ptr<GameObject> _sun;
+	shared_ptr<GameObject> _earth;
+	shared_ptr<GameObject> _moon;
 };
 

@@ -1,14 +1,15 @@
 ﻿#pragma once
 #include "TesterPch.h"
-#include "myVec3.h"
 #include "assert.h"
-#include "myMatrix3x3.h"
-#include "myVec4.h"
-#include "myMatrix4x4.h"
-#include "myEulerAngles.h"
-#include "myQuaternion.h"
 #include "TesterUtils.h"
-#include "TransformBase.h"
+
+//#include "myVec3.h"
+//#include "myMatrix3x3.h"
+//#include "myVec4.h"
+//#include "myMatrix4x4.h"
+//#include "myEulerAngles.h"
+//#include "myQuaternion.h"
+//#include "TransformBase.h"
 
 using namespace std;
 
@@ -227,7 +228,7 @@ void TestVec4Matrix4x4()
 
 void TestQuaternion()
 {
-    if(1)
+    if(0)
     {
         //myEulerAngles startEuler(90.f, 0.f, 0.f);
         //myEulerAngles startEuler(45.f, 45.f, 0.f);
@@ -276,13 +277,13 @@ void TestQuaternion()
         PrintEulerAngles(startEuler);
 
         myQuaternion startQuat(startEuler);
-        PritQuaternion(startQuat);
+        PrintQuaternion(startQuat);
 
         myMatrix3x3 vertexMat = startQuat.ToRotateMatrix();
         PrintMatrix3x3(vertexMat);
 
         myQuaternion regQuat(vertexMat);
-        PritQuaternion(regQuat);
+        PrintQuaternion(regQuat);
 
         myEulerAngles regEuler = regQuat.ToEulerAngles();
         PrintEulerAngles(regEuler);
@@ -291,6 +292,27 @@ void TestQuaternion()
 
 
 
+    if (1) // 회전 보간 테스트
+    {
+        myQuaternion startQuaternion(myVec3(0.0f, 0.0f, 0.0f));
+        myQuaternion endQuaternion(myVec3(90.f, 90.f, 0.f));
+        myQuaternion lepredQuaternion;
+        
+        PrintQuaternion(startQuaternion);
+        PrintQuaternion(endQuaternion);
+
+
+        cout << "Lerp" << endl;
+        for (int i = 0; i <= 10; i++)
+        {
+            lepredQuaternion.Slerp(startQuaternion, endQuaternion, i / 10.f);
+
+            cout << i/ 10.f << endl;
+            PrintQuaternion(lepredQuaternion);
+        }
+
+
+    }
 
 }
 
@@ -328,7 +350,7 @@ void TestTransformBase()
     }
 
 
-    if (1) // Add 회전축 테스트
+    if (0) // Add 회전축 테스트
     {
         cout << "AddRot 으로 잘 회전되는지 확인하는 코드" << endl;
         TransformBase transform(myVec3(1, 0, 0));
@@ -348,7 +370,7 @@ int main()
 
     //TestVec4Matrix4x4();
 
-    //TestQuaternion();
+    TestQuaternion();
 
-    TestTransformBase();
+    //TestTransformBase();
 }

@@ -71,10 +71,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)MyMathTester\Libs\Libraries\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)Libraries\Lib\MyMath\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)MyMathTester\Libs\Libraries\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)Libraries\Lib\MyMath\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -125,7 +125,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy /Y "$(SolutionDir)MyMath\*.h" "$(SolutionDir)MyMathTester\Libs\Include"</Command>
+      <Command>xcopy /Y "$(SolutionDir)MyMath\*.h" "$(SolutionDir)Libraries\Include\MyMath\"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,7 +147,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy /Y "$(SolutionDir)MyMath\*.h" "$(SolutionDir)MyMathTester\Libs\Include"</Command>
+      <Command>xcopy /Y "$(SolutionDir)MyMath\*.h" "$(SolutionDir)Libraries\Include\MyMath\"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -156,6 +156,7 @@
     <ClInclude Include="CoreDefenition.h" />
     <ClInclude Include="MathUtils.h" />
     <ClInclude Include="myEulerAngles.h" />
+    <ClInclude Include="MyMath.h" />
     <ClInclude Include="myMatrix3x3.h" />
     <ClInclude Include="myMatrix4x4.h" />
     <ClInclude Include="myQuaternion.h" />

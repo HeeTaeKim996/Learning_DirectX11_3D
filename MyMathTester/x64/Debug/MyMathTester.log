@@ -1,2 +1,3 @@
-﻿  MyMathTester.cpp
+﻿  TesterPch.cpp
+  MyMathTester.cpp
   MyMathTester.vcxproj -> C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\x64\Debug\MyMathTester.exe

@@ -24,7 +24,7 @@ public:
 	void SetPosition(const myVec3& InPosition) { _position = InPosition; }
 	void AddPosition(const myVec3& InDeltaPosition) { _position += InDeltaPosition; }
 
-	void SetRotation(const myEulerAngles& InRotator) { _rotation = myQuaternion(InRotator); }
+	void SetRotation(const myEulerAngles& InEulerAngles) { _rotation = myQuaternion(InEulerAngles); }
 	void SetRotation(const myMatrix3x3& InMatrix) { _rotation = myQuaternion(InMatrix); }
 	void SetRotation(const myQuaternion& InQuaternion) { _rotation = InQuaternion; }
 
@@ -32,6 +32,9 @@ public:
 	void AddPitchRotation(float InDegree);
 	void AddRollRotation(float InDegree);
 
+	void AddUnitXRotation(float InDegree);
+	void AddUnitYRotation(float InDegree);
+	void AddUnitZRotation(float InDegree);
 
 	void SetScale(const myVec3& InScale) { _scale = InScale; }
 	
@@ -39,8 +42,8 @@ public:
 	myVec3 GetXAxis() const { return _rotation * myVec3::UnitX; }
 	myVec3 GetYAxis() const { return _rotation * myVec3::UnitY; }
 	myVec3 GetZAxis() const { return _rotation * myVec3::UnitZ; }
-	myMatrix4x4 GetMatrix() const;
-
+	myMatrix4x4 GetSRT() const;
+	myEulerAngles GetEulerAngles();
 
 	myVec3 GetPosition() const { return _position; }
 	myQuaternion GetRotation() const { return _rotation; }

@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "myEulerAngles.h"
+#include "myVec3.h"
 
 const myEulerAngles myEulerAngles::Identity;
 
@@ -23,4 +24,9 @@ float myEulerAngles::GetAxisClampValue(float InRotatorValue)
 	}
 
 	return angle;
+}
+
+myVec3 myEulerAngles::ToVec3()
+{
+	return myVec3(Pitch, Yaw, Roll);
 }

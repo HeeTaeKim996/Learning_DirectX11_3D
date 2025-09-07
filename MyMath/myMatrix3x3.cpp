@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "myMatrix3x3.h"
-
+#include "myVec3.h"
+#include "myMatrix4x4.h"
+#include "myVec4.h"
 
 const myMatrix3x3 myMatrix3x3::Identity;
 myMatrix3x3::myMatrix3x3() : Arrays{ myVec3(1.f, 0, 0), myVec3(0, 1.f, 0), myVec3(0, 0, 1.f) }
@@ -56,4 +58,14 @@ myMatrix3x3 myMatrix3x3::Transpose() const
 		myVec3(Arrays[0].Y, Arrays[1].Y, Arrays[2].Y),
 		myVec3(Arrays[0].Z, Arrays[1].Z, Arrays[2].Z)
 	);
+}
+
+myMatrix4x4 myMatrix3x3::ToMatrix4x4()
+{
+	return myMatrix4x4{
+		Arrays[0].ToVec4(),
+		Arrays[1].ToVec4(),
+		Arrays[2].ToVec4(),
+		myVec4(0, 0, 0, 1)
+	};
 }

@@ -1,55 +1,71 @@
 #include "pch.h"
 #include "CameraScript.h"
-#include "Transform.h"
 #include "InputManager.h"
 #include "TimeManager.h"
 
 void CameraScript::Start()
 {
-
+	_mousePos = INPUT->GetMousePos();
 }
 
 void CameraScript::Update()
 {
-	Vec3 pos = GetTransform()->GetPosition();
 	if (INPUT->GetButton(KEY_TYPE::W))
 	{
-		pos += GetTransform()->GetLook() * _speed * DT;
+		GetTransform()->AddPosition(GetTransform()->GetZAxis() * _speed * DT);
 	}
 	else if (INPUT->GetButton(KEY_TYPE::S))
 	{
-		pos -= GetTransform()->GetLook() * _speed * DT;
+		GetTransform()->AddPosition(-GetTransform()->GetZAxis() * _speed * DT);
 	}
 
 	if (INPUT->GetButton(KEY_TYPE::D))
 	{
-		pos += GetTransform()->GetRight() * _speed * DT;
+		GetTransform()->AddPosition(GetTransform()->GetXAxis() * _speed * DT);
 	}
 	else if (INPUT->GetButton(KEY_TYPE::A))
 	{
-		pos -= GetTransform()->GetRight() * _speed * DT;
+		GetTransform()->AddPosition(-GetTransform()->GetXAxis() * _speed * DT);
 	}
-	GetTransform()->SetPosition(pos);
 
-
-	Vec3 rotation = GetTransform()->GetLocalRotation();
+	
 	if (INPUT->GetButton(KEY_TYPE::Q))
 	{
-		rotation.x += DT * 0.8f;
+		GetTransform()->AddPitchRotation(40.f * DT);
+
 	}
 	else if (INPUT->GetButton(KEY_TYPE::E))
 	{
-		rotation.x -= DT * 0.8f;
+		GetTransform()->AddPitchRotation(-40.f * DT);
 	}
 
 	if (INPUT->GetButton(KEY_TYPE::Z))
 	{
-		rotation.y += DT * 0.8f;
+		GetTransform()->AddYawRotation(40.f * DT);
 	}
 	else if (INPUT->GetButton(KEY_TYPE::C))
 	{
-		rotation.y -= DT * 0.8f;
+		GetTransform()->AddYawRotation(-40.f * DT);
 	}
-	GetTransform()->SetRotation(rotation);
+
 	
+	POINT mousePos = INPUT->GetMousePos();
+	float diffX = mousePos.x - _mousePos.x;
+	float diffY = mousePos.y - _mousePos.y;
+	_mousePos = mousePos;
+	if (fabs(diffX) > 1e-0)
+	{
+		GetTransform()->AddYawRotation(-diffX * 0.4f);
+	}
+	if (fabs(diffY) > 1e-0)
+	{
+		GetTransform()->AddPitchRotation(-diffY * 0.4f);
+	}
+
+
+
+	if (INPUT->GetButton(KEY_TYPE::KEY_2))
+	{
+		
+	}
 }
