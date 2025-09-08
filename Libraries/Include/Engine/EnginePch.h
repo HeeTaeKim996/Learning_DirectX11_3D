@@ -42,7 +42,16 @@ using namespace Microsoft::WRL;
 
 #include <FX11/d3dx11effect.h>
 
-// Libs
+
+// Assim : 리소스 로드를 위한 외부 라이브러리
+// ※ 외부 Assimp 라이브러리 다운 받는 간략한 과정(CMake 포함)은, 55.Assimp 강의 참조
+#include <Assimp/Importer.hpp>
+#include <Assimp/scene.h>
+#include <Assimp/postprocess.h>
+#pragma comment(lib, "Assimp/assimp-vc143-mtd.lib")
+
+
+// Extern Libs
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "d3dcompiler.lib")
 
@@ -80,7 +89,13 @@ using namespace Microsoft::WRL;
 
 // MyMath
 #include "MyMath/MyMath.h"
-#pragma comment(lib, "MyMath.lib")
+//#pragma comment(lib, "MyMath.lib")
+#ifdef _DEBUG
+#pragma comment(lib, "MyMath/Debug/MyMath.lib")
+#else
+#pragma comment(lib, "MyMath/Release/MyMath.lib")
+#endif
+
 #include "MyMathUtils.h"
 #endif
 

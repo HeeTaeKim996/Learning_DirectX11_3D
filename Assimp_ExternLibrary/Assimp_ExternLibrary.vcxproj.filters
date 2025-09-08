@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스파일">
+      <UniqueIdentifier>{c3a61ee6-f872-4d7e-8026-52dc60cc070a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssimpTool.cpp">
+      <Filter>소스파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AsTypes.cpp">
+      <Filter>소스파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraScript.cpp">
+      <Filter>소스파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter.cpp">
+      <Filter>소스파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGuiDemo.cpp">
+      <Filter>소스파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticMeshDemo.cpp">
+      <Filter>소스파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AssimpTool.h">
+      <Filter>소스파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AsTypes.h">
+      <Filter>소스파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraScript.h">
+      <Filter>소스파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter.h">
+      <Filter>소스파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGuiDemo.h">
+      <Filter>소스파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>소스파일</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>소스파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticMeshDemo.h">
+      <Filter>소스파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

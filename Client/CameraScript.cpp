@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "CameraScript.h"
-#include "InputManager.h"
-#include "TimeManager.h"
+#include "Engine/InputManager.h"
+#include "Engine/TimeManager.h"
 
 void CameraScript::Start()
 {

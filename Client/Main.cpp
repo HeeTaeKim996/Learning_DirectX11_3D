@@ -15,6 +15,7 @@
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
+
 	GameDesc desc;
 	desc.appName = L"GameCoding";
 	desc.hInstance = hInstance;

@@ -8,5 +8,8 @@ public:
 
 	static wstring ToWString(string value);
 	static string ToString(wstring value);
+
+	static void Replace(OUT string& str, string comp, string rep);
+	static void Replace(OUT wstring& str, wstring comp, wstring rep);
 };
 

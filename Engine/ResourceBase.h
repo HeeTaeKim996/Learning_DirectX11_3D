@@ -1,7 +1,7 @@
 #pragma once
 
 #if 1
-enum class ResourceType : uint8
+enum class ResourceType : int8
 {
 	None = -1,
 	Mesh,

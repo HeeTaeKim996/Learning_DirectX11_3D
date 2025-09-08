@@ -160,14 +160,17 @@ TransformBase TransformBase::LocalToWorld(const TransformBase& InParentWorldTran
 
 	ret.SetScale(InParentWorldTransform.GetScale() * GetScale());
 
-	ret.SetRotation(InParentWorldTransform.GetRotation() * GetRotation()); 
+	ret.SetRotation(GetRotation() * InParentWorldTransform.GetRotation());
+	/*	- 주의. 현재 LH 이므로, q2* q1* v q1 q2 이므로, 로테이션을 사원수로 연산할 때, 기존 q1이 좌측, 새로운 q2가 우측
+		- 기존 강의의 경우, RH로 작성됐으므로, q2 q1 v q1* q2* 이므로, 강의 코드에서는 기존 q1가 우측, 새로운 q2가 좌측 */
+
 
 	ret.SetPosition(
 		InParentWorldTransform.GetPosition()
 		+ InParentWorldTransform.GetRotation() * (GetPosition() * InParentWorldTransform.GetScale())
 	);
 
-	return ret;
+	return ret;	
 }
 
 TransformBase TransformBase::WorldToLocal(const TransformBase& InParentWorldTransform) const
@@ -177,8 +180,9 @@ TransformBase TransformBase::WorldToLocal(const TransformBase& InParentWorldTran
 	
 	ret.SetScale(GetScale() * invParent.GetScale());
 
-	ret.SetRotation(invParent.GetRotation() * GetRotation());
-
+	ret.SetRotation(GetRotation() * invParent.GetRotation());
+	/*	- 주의. 현재 LH 이므로, q2* q1* v q1 q2 이므로, 로테이션을 사원수로 연산할 때, 기존 q1이 좌측, 새로운 q2가 우측
+		- 기존 강의의 경우, RH로 작성됐으므로, q2 q1 v q1* q2* 이므로, 강의 코드에서는 기존 q1가 우측, 새로운 q2가 좌측 */
 
 	ret.SetPosition(
 		invParent.GetPosition()
