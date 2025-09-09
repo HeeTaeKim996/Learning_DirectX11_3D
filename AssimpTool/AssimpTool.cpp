@@ -4,19 +4,19 @@
 
 void AssimpTool::Init()
 {
-	{
-		shared_ptr<Converter> converter = make_shared<Converter>();
+	//{
+	//	shared_ptr<Converter> converter = make_shared<Converter>();
 
-		// FBX -> Memory
-		converter->ReadAssetFile(L"House/House.fbx");
+	//	// FBX -> Memory
+	//	converter->ReadAssetFile(L"House/House.fbx");
 
 
-		// Memory -> CustomData
-		converter->ExportMaterialData(L"House/House");
-		converter->ExportModelData(L"House/House");
+	//	// Memory -> CustomData
+	//	converter->ExportMaterialData(L"House/House");
+	//	converter->ExportModelData(L"House/House");
 
-		// CustomData -> Memory
-	}
+	//	// CustomData -> Memory
+	//}
 
 
 	{

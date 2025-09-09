@@ -3,10 +3,20 @@
 #include "Texture.h"
 #include "Shader.h"
 #include "Mesh.h"
+#include <filesystem>
+
 
 void ResourceManager::Init()
 {
 	CreateDefaultMesh();
+}
+
+shared_ptr<Texture> ResourceManager::GetOrAddTexture(const wstring& key, const wstring& path)
+{
+	if (filesystem::exists(filesystem::path(path)) == false) 
+		return nullptr;
+
+	return Load<Texture>(key, path);
 }
 
 void ResourceManager::CreateDefaultMesh()

@@ -31,6 +31,12 @@
     <Filter Include="01. Graphics\Shader_ExternLibrary">
       <UniqueIdentifier>{088ad58c-882b-459f-abd9-9c4263633264}</UniqueIdentifier>
     </Filter>
+    <Filter Include="98. Utils\extern">
+      <UniqueIdentifier>{0733bf8f-43ea-4415-94f6-200cc948686c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00. Engine\Model">
+      <UniqueIdentifier>{a9397333-1ed3-4a91-b31d-f8d0cfa1758e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -44,12 +50,6 @@
     </ClInclude>
     <ClInclude Include="Types.h">
       <Filter>99. Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="SimpleMath.h">
-      <Filter>98. Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="tinyxml2.h">
-      <Filter>98. Utils</Filter>
     </ClInclude>
     <ClInclude Include="Utils.h">
       <Filter>98. Utils</Filter>
@@ -132,22 +132,31 @@
     <ClInclude Include="Material.h">
       <Filter>00. Engine\Resource</Filter>
     </ClInclude>
-    <ClInclude Include="MyMathUtils.h">
-      <Filter>98. Utils</Filter>
-    </ClInclude>
     <ClInclude Include="FileUtils.h">
       <Filter>98. Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMathUtils.h">
+      <Filter>98. Utils\extern</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleMath.h">
+      <Filter>98. Utils\extern</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml2.h">
+      <Filter>98. Utils\extern</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelMesh.h">
+      <Filter>00. Engine\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>00. Engine\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelRenderer.h">
+      <Filter>04. Component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>99. Headers</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleMath.cpp">
-      <Filter>98. Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="tinyxml2.cpp">
-      <Filter>98. Utils</Filter>
     </ClCompile>
     <ClCompile Include="Utils.cpp">
       <Filter>98. Utils</Filter>
@@ -233,10 +242,28 @@
     <ClCompile Include="FileUtils.cpp">
       <Filter>98. Utils</Filter>
     </ClCompile>
+    <ClCompile Include="MyMathUtils.cpp">
+      <Filter>98. Utils\extern</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleMath.cpp">
+      <Filter>98. Utils\extern</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml2.cpp">
+      <Filter>98. Utils\extern</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelMesh.cpp">
+      <Filter>00. Engine\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>00. Engine\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelRenderer.cpp">
+      <Filter>04. Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="SimpleMath.inl">
-      <Filter>98. Utils</Filter>
+      <Filter>98. Utils\extern</Filter>
     </None>
   </ItemGroup>
 </Project>

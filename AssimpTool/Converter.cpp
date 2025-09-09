@@ -52,13 +52,13 @@ void Converter::ReadModelData(aiNode* node, int32 index, int32 parent)
 {
 	shared_ptr<asBone> bone = make_shared<asBone>();
 
-	bone->index;
+	bone->index = index;
 	bone->parent = parent;
 	bone->name = node->mName.C_Str();
 
 	DirectX::SimpleMath::Matrix dxMat(node->mTransformation[0]); 
 	// ※ SimpleMath Matrix 는 float 주소 하나 주면, 채워주는 코드 있는데, myMatrix에는 안만들었어서, 이렇게 처리
-	Matrix localTransform = SimpleMatrixToMyMatrix(dxMat);
+	Matrix localTransform = MyMathUtils::SimpleMatrixToMyMatrix(dxMat);
 	bone->transform = localTransform.Transpose(); // ※ FBX 는 col_major 로 작성되기에, Transpose 필요
 	// ※ 여기서 얻는 SRT 는 로컬 트랜스폼
 
@@ -101,8 +101,9 @@ void Converter::ReadMeshData(aiNode* node, int32 bone)
 		const aiMaterial* material = _scene->mMaterials[srcMesh->mMaterialIndex];
 		mesh->materialName = material->GetName().C_Str();
 
+		const uint32 startVertex = mesh->vertices.size();
 
-
+		// Vertex
 		for (uint32 v = 0; v < srcMesh->mNumVertices; v++)
 		{
 			// Vertex
@@ -125,10 +126,60 @@ void Converter::ReadMeshData(aiNode* node, int32 bone)
 
 			mesh->vertices.push_back(vertex);
 		}
+
+		// Index
+		for (uint32 f = 0; f < srcMesh->mNumFaces; f++)
+		{
+			aiFace& face = srcMesh->mFaces[f];
+
+			for (uint32 k = 0; k < face.mNumIndices; k++)
+			{
+				mesh->indices.push_back(face.mIndices[k] + startVertex);
+			}
+		}
+
+		_meshes.push_back(mesh);
 	}
 }
 void Converter::WriteModelFile(wstring finalPath)
 {
+	filesystem::path path = filesystem::path(finalPath);
+
+	// 파일이 없으면 만든다
+	filesystem::create_directory(path.parent_path());
+
+	shared_ptr<FileUtils> file = make_shared<FileUtils>();
+	file->Open(finalPath, FileMode::Write);
+
+	// Bone Data
+	file->Write<uint32>(_bones.size());
+	for (const shared_ptr<asBone>& bone : _bones)
+	{
+		file->Write<string>(bone->name);
+		file->Write<int32>(bone->index);
+		file->Write<int32>(bone->parent);
+		file->Write<Matrix>(bone->transform);
+	}
+
+
+	// Mesh Data
+	file->Write<uint32>(_meshes.size());
+	for (const shared_ptr<asMesh>& mesh : _meshes)
+	{
+		file->Write<string>(mesh->name);
+		file->Write<int32>(mesh->boneIndex);
+		file->Write<string>(mesh->materialName);
+
+		// VertexDatas
+		uint32 verticesSize = mesh->vertices.size();
+		file->Write<uint32>(verticesSize);
+		file->Write(&mesh->vertices[0], sizeof(VertexType) * verticesSize);
+
+		// IndexDatas
+		uint32 indicesSize = mesh->indices.size();
+		file->Write<uint32>(indicesSize);
+		file->Write(&mesh->indices[0], sizeof(uint32) * indicesSize);
+	}
 
 }
 
@@ -338,5 +389,8 @@ string Converter::WriteTexture(string saveFolder, string file)
 		   에 해당되지 않은 형태로, 정점에 컬러 정보가 담겨 있는 경우 
 		   ( asMesh::mColors 같은 형태로 데이터가 담김. 현재 작성 기준 구조체에 없으므로, 그런 형태는 지원 안하는 듯 )
 	
+
+		※	FileUtils 는 바이너리 데이터를 읽고/쓰기 위해 직접 만든 클래스이다. PNG, JPG 클래스 또한 바이너리 데이터로,
+			읽기, 쓰기가 가능하다
 	*/
 }

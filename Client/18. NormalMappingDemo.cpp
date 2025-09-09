@@ -60,14 +60,14 @@ void NormalMappingDemo::Init()
 
 	//// Camera
 	_camera = make_shared<GameObject>();
-	_camera->GetOrAddTrasnform()->SetPosition(Vec3{ 0.f, 3.f, -15.f });
+	_camera->GetOrAddTransform()->SetPosition(Vec3{ 0.f, 3.f, -15.f });
 	_camera->AddComponent(make_shared<Camera>());
 	_camera->AddComponent(make_shared<CameraScript>());
 
 
 	 //Object
 	_obj = make_shared<GameObject>();
-	_obj->GetOrAddTrasnform()->SetPosition(Vec3(0.f, 4.f, -8.f));
+	_obj->GetOrAddTransform()->SetPosition(Vec3(0.f, 4.f, -8.f));
 	_obj->AddComponent(make_shared<MeshRenderer>());
 	{
 		shared_ptr<Mesh> mesh = RESOURCES->Get<Mesh>(L"Sphere");
@@ -81,7 +81,7 @@ void NormalMappingDemo::Init()
 
 	// Object2
 	_obj2 = make_shared<GameObject>();
-	_obj2->GetOrAddTrasnform()->SetPosition(Vec3{ 0, 0.f, 2.f });
+	_obj2->GetOrAddTransform()->SetPosition(Vec3{ 0, 0.f, 2.f });
 	_obj2->AddComponent(make_shared<MeshRenderer>());
 	{
 		shared_ptr<Mesh> mesh = RESOURCES->Get<Mesh>(L"Cube");
@@ -104,7 +104,7 @@ void NormalMappingDemo::Init()
 	{ // DEBUG
 
 		_sun = make_shared<GameObject>();
-		_sun->GetOrAddTrasnform();
+		_sun->GetOrAddTransform();
 		_sun->AddComponent(make_shared<MeshRenderer>());
 		{
 			shared_ptr<Mesh> mesh = RESOURCES->Get<Mesh>(L"Cube");
@@ -118,7 +118,7 @@ void NormalMappingDemo::Init()
 
 
 		_earth = make_shared<GameObject>();
-		_earth->GetOrAddTrasnform()->SetPosition(Vec3(7.f, 3.5f, 0));
+		_earth->GetOrAddTransform()->SetPosition(Vec3(7.f, 3.5f, 0));
 		_earth->GetTransform()->AddLocalPitchRotation(10.f);
 		_earth->GetTransform()->SetParent(*(_sun->GetTransform().get()));
 		_earth->AddComponent(make_shared<MeshRenderer>());
@@ -132,7 +132,7 @@ void NormalMappingDemo::Init()
 		}
 
 		_moon = make_shared<GameObject>();
-		_moon->GetOrAddTrasnform()->SetPosition(Vec3(10.f, 3.5f, 0));
+		_moon->GetOrAddTransform()->SetPosition(Vec3(10.f, 3.5f, 0));
 		//_moon->GetTransform()->SetScale(myVec3(0.5f, 0.5f, 0.5f));
 		_moon->GetTransform()->SetParent(*(_earth->GetTransform().get()));
 		_moon->AddComponent(make_shared<MeshRenderer>());

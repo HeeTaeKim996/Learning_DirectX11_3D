@@ -30,6 +30,9 @@
     <ClInclude Include="AsType.h">
       <Filter>Main</Filter>
     </ClInclude>
+    <ClInclude Include="StaticMeshDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -49,6 +52,9 @@
     </ClCompile>
     <ClCompile Include="AsType.cpp">
       <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticMeshDemo.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,6 +1,7 @@
 #pragma once
 
-using VertexType = VertexTextureNormalTangentBlendData;
+//using VertexType = VertexTextureNormalTangentBlendData; // 기존 코드
+using VertexType = ModelVertexType; // 수정 ( Read <-> Write 타입 동일 보장 )
 
 struct asBone
 {

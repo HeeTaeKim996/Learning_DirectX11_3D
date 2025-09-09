@@ -48,7 +48,14 @@ void CameraScript::Update()
 		GetTransform()->AddYawRotation(-40.f * DT);
 	}
 
-	
+
+	static bool tempBool = false;
+	if (tempBool == false)
+	{
+		_mousePos = INPUT->GetMousePos();
+		tempBool = true;
+	}
+
 	POINT mousePos = INPUT->GetMousePos();
 	float diffX = mousePos.x - _mousePos.x;
 	float diffY = mousePos.y - _mousePos.y;

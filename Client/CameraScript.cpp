@@ -31,7 +31,7 @@ void CameraScript::Update()
 	
 	if (INPUT->GetButton(KEY_TYPE::Q))
 	{
-		GetTransform()->AddPitchRotation(40.f * DT);
+		GetTransform()->AddPitchRotation(40.f * DT);	
 
 	}
 	else if (INPUT->GetButton(KEY_TYPE::E))
@@ -49,6 +49,15 @@ void CameraScript::Update()
 	}
 
 	
+	static bool tempBool = false;
+	if (tempBool == false)
+	{
+		_mousePos = INPUT->GetMousePos();
+		tempBool = true;
+	}
+	// ※ 위 코드.. Init에서 Start 발동시킬 때에는 INPUT 에서 MpousesPose 못찾음. 추후 Start를 Init 말고 다른데서 처리한다면
+	//   그 때 Start에서 처리시켜도 될듯. 우선은 임시로 여기서 이렇게 처리함
+
 	POINT mousePos = INPUT->GetMousePos();
 	float diffX = mousePos.x - _mousePos.x;
 	float diffY = mousePos.y - _mousePos.y;

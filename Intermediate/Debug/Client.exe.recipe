@@ -57,6 +57,9 @@
     <ContentFile>
       <FullPath>C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\15. NormalMapping.cso</FullPath>
     </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\16. ModelDemo.cso</FullPath>
+    </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />

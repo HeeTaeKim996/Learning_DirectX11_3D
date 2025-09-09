@@ -1,6 +1,6 @@
 #pragma once
 
-#if 0
+#if 1
 template<typename T>
 class Geometry
 {
@@ -103,7 +103,7 @@ private:
 
 
 
-#if 1 // First
+#if 0 // First
 template<typename T>
 class Geometry
 {
