@@ -60,15 +60,15 @@ void CameraScript::Update()
 	float diffX = mousePos.x - _mousePos.x;
 	float diffY = mousePos.y - _mousePos.y;
 	_mousePos = mousePos;
+
 	if (fabs(diffX) > 1e-0)
 	{
-		GetTransform()->AddYawRotation(-diffX * 0.4f);
+		GetTransform()->AddUnitYRotation(-diffX * 0.4f);
 	}
 	if (fabs(diffY) > 1e-0)
 	{
 		GetTransform()->AddPitchRotation(-diffY * 0.4f);
 	}
-
 
 
 	if (INPUT->GetButton(KEY_TYPE::KEY_2))

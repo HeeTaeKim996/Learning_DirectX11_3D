@@ -9,7 +9,7 @@ class Model : public enable_shared_from_this<Model>
 public:
 	Model();
 	~Model();
-
+	
 
 public:
 	void ReadMaterial(wstring fileName);

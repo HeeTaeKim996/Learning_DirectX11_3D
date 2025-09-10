@@ -39,6 +39,43 @@ void Converter::ExportModelData(wstring savePath)
 {
 	wstring finalPath = _modelPath + savePath + L".mesh";
 	ReadModelData(_scene->mRootNode, -1, -1);
+	ReadSkinData();
+
+	{ // 디버그 용도 스킨데이터 CSV 파일 만들기 ( 아래 WriteModelFile 에 바이너리 데이터로 실데이터는 저장됨 )
+
+		FILE* file;
+		::fopen_s(&file, "../Vertices.csv", "w");
+
+		::fprintf(file, "Index, Name\n");
+		for (const shared_ptr<asBone>& bone : _bones)
+		{
+			string name = bone->name;
+			::fprintf(file, "%d,%s\n", bone->index, bone->name.c_str());
+		}
+
+		::fprintf(file, "\n");
+
+		for (const shared_ptr<asMesh>& mesh : _meshes)
+		{
+			fprintf(file, "\n%s\n", mesh->name.c_str());
+			fprintf(file, 
+				"posX, posY, posZ, index1, index2, index3, index4, weight1, weight2, weight3, weight4\n");
+			for (UINT i = 0; i < mesh->vertices.size(); i++)
+			{
+				Vec3 p = mesh->vertices[i].position;
+				Vec4 indices = mesh->vertices[i].blendIndices;
+				Vec4 weights = mesh->vertices[i].blendWeights;
+
+				::fprintf(file, "%f, %f, %f,", p.X, p.Y, p.Z);
+				::fprintf(file, "%f, %f, %f, %f,", indices.X, indices.Y, indices.Z, indices.W);
+				::fprintf(file, "%f, %f, %f, %f\n", weights.X, weights.Y, weights.Z, weights.W);
+			}
+		}
+
+		::fclose(file);
+	}
+
+
 	WriteModelFile(finalPath);
 }
 void Converter::ExportMaterialData(wstring savePath)
@@ -46,6 +83,15 @@ void Converter::ExportMaterialData(wstring savePath)
 	wstring finalPath = _texturePath + savePath + L".xml";
 	ReadMaterialData();
 	WriteMaterialData(finalPath);
+}
+
+void Converter::ExportAnimationData(wstring savePath, uint32 index/*=0*/)
+{
+	wstring finalPath = _modelPath + savePath + L".clip";
+	assert(index < _scene->mNumAnimations);
+	
+
+
 }
 
 void Converter::ReadModelData(aiNode* node, int32 index, int32 parent)
@@ -57,7 +103,7 @@ void Converter::ReadModelData(aiNode* node, int32 index, int32 parent)
 	bone->name = node->mName.C_Str();
 
 	DirectX::SimpleMath::Matrix dxMat(node->mTransformation[0]); 
-	// ※ SimpleMath Matrix 는 float 주소 하나 주면, 채워주는 코드 있는데, myMatrix에는 안만들었어서, 이렇게 처리
+	 //※ SimpleMath Matrix 는 float 주소 하나 주면, 채워주는 코드 있는데, myMatrix에는 안만들었어서, 이렇게 처리
 	Matrix localTransform = MyMathUtils::SimpleMatrixToMyMatrix(dxMat);
 	bone->transform = localTransform.Transpose(); // ※ FBX 는 col_major 로 작성되기에, Transpose 필요
 	// ※ 여기서 얻는 SRT 는 로컬 트랜스폼
@@ -67,7 +113,8 @@ void Converter::ReadModelData(aiNode* node, int32 index, int32 parent)
 	{
 		parentWorld = _bones[parent]->transform;
 	}
-	bone->transform = bone->transform * parentWorld; // bone->transform 에 로컬 트랜스폼이 아닌, 월드 트랜스폼을 저장
+	bone->transform = bone->transform * parentWorld; 
+	// ※ bone->transform 에 로컬 트랜스폼이 아닌, 월드 트랜스폼을 저장. FBX에서 오는 transform 은 로컬트랜스폼 정보
 	_bones.push_back(bone);
 
 
@@ -141,6 +188,56 @@ void Converter::ReadMeshData(aiNode* node, int32 bone)
 		_meshes.push_back(mesh);
 	}
 }
+void Converter::ReadSkinData()
+{
+	/* ※ FBX 에는 정점별로 본들의 Weight 가 저장돼있는 게 아니라, 본별로 Weight > 0 인 정점들이 기록돼있기 때문에,
+		 코드가 아래와 같다 */
+
+	for (uint32 i = 0; i < _scene->mNumMeshes; i++)
+	{
+		aiMesh* srcMesh = _scene->mMeshes[i];
+		if (srcMesh->HasBones() == false)
+		{
+			continue;
+		}
+
+		shared_ptr<asMesh> mesh = _meshes[i];
+
+		vector<asBoneWeight> tempVertexBoneWeights;
+		tempVertexBoneWeights.resize(mesh->vertices.size());
+
+
+		// Bone 을 순회하면서 연관된 VertexId, Weight 를 구해서 기록한다
+		for (uint32 b = 0; b < srcMesh->mNumBones; b++)
+		{
+			aiBone* srcMeshBone = srcMesh->mBones[b];
+			uint32 boneIndex = GetBoneIndex(srcMeshBone->mName.C_Str());
+
+			for (uint32 w = 0; w < srcMeshBone->mNumWeights; w++)
+			{
+				uint32 index = srcMeshBone->mWeights[w].mVertexId;
+				float weight = srcMeshBone->mWeights[w].mWeight;
+
+				// TODO
+				tempVertexBoneWeights[index].AddWeights(boneIndex, weight);
+			}
+		}
+
+		// 최종 결과 계산
+		for (uint32 v = 0; v < tempVertexBoneWeights.size(); v++)
+		{
+			tempVertexBoneWeights[v].Normalize();
+
+			asBlendWeight blendWeight = tempVertexBoneWeights[v].GetBlendWeight();
+			mesh->vertices[v].blendIndices = blendWeight.indices;
+			mesh->vertices[v].blendWeights = blendWeight.weights;
+		}
+	}
+		
+
+
+
+}
 void Converter::WriteModelFile(wstring finalPath)
 {
 	filesystem::path path = filesystem::path(finalPath);
@@ -182,6 +279,8 @@ void Converter::WriteModelFile(wstring finalPath)
 	}
 
 }
+
+
 
 void Converter::ReadMaterialData()
 {
@@ -241,7 +340,12 @@ void Converter::WriteMaterialData(wstring finalPath)
 	filesystem::create_directory(path.parent_path()); 
 	// ※ 최종이 확장자이니, parent_path() 는 확장자가 담긴 파일명. 위 코드는 해당 파일을 생성하는 코드 (이미 있다면 X)
 
-	string folder = path.parent_path().string();
+	string folder = path.parent_path().string(); 
+	//string folder = path.string();
+	// ※ @@기존 강의 코드인데, 이러면 Texture 에 할당돼서, 아래 코드로 바꿈. 위 코드가 맞는 것 같은데. 왜 이러는지
+	//   이해를 못함. png 와 jpg의 차이인지.. 어떤건 전자가, 어떤건 후자로 해야 작동하네   
+
+
 
 	shared_ptr<tinyxml2::XMLDocument> document = make_shared<tinyxml2::XMLDocument>();
 
@@ -358,6 +462,8 @@ string Converter::WriteTexture(string saveFolder, string file)
 		string pathStr = (filesystem::path(saveFolder) / fileName).string();
 		Utils::Replace(pathStr, "\\", "/");
 
+
+
 		::CopyFileA(originStr.c_str(), pathStr.c_str(), false);
 	}
 
@@ -393,4 +499,35 @@ string Converter::WriteTexture(string saveFolder, string file)
 		※	FileUtils 는 바이너리 데이터를 읽고/쓰기 위해 직접 만든 클래스이다. PNG, JPG 클래스 또한 바이너리 데이터로,
 			읽기, 쓰기가 가능하다
 	*/
+}
+
+shared_ptr<asAnimation> Converter::ReadAnimationData(aiAnimation* srcAnimation)
+{
+	shared_ptr<asAnimation> animation = make_shared<asAnimation>();
+	animation->name = srcAnimation->mName.C_Str();
+	animation->frameRate = srcAnimation->mTicksPerSecond;
+	animation->frameCount = (uint32)srcAnimation->mDuration + 1;
+	/* ※ mDuration 의 단위는 초 가 아닌 프레임 단위.따라서 애니매이션의 전체 시간(초) 는 mDuration이 아닌,
+		  mDuration / mTickPerSecond 이다.
+		  frameCount 에 + 1 을 한 이유는 mDuration의 사작 프레임 인덱스가 0이기 때문
+		  
+		  ※ 정확히는 mDuration 의 단위가 프레임이 아닌 Tick 이라 하는데, 프레임 이라는 개념에 더 가까운 것 같다 */
+
+
+
+}
+
+uint32 Converter::GetBoneIndex(const string& name)
+{
+	for (shared_ptr<asBone>& bone : _bones)
+	{
+		if (bone->name == name)
+		{
+			return bone->index;
+		}
+	}
+
+	assert(0);
+
+	return 0;
 }

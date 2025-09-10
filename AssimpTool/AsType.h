@@ -33,3 +33,101 @@ struct asMaterial
 	string specularFile;
 	string normalFile;
 };
+
+
+// Animation
+
+struct asBlendWeight
+{
+	myVec4 indices = myVec4(0, 0, 0, 0);
+	myVec4 weights = myVec4(0, 0, 0, 0);
+
+	void Set(uint32 index, uint32 boneIndex, float weight)
+	{
+		indices[index] = boneIndex;
+		weights[index] = weight;
+	}
+};
+
+struct asBoneWeight
+{
+	using Pair = pair<int32, float>;
+	vector<Pair> boneWeights;
+
+	void AddWeights(uint32 boneIndex, float weight)
+	{
+		if (weight <= 0.f)
+			return;
+		
+		auto findIt = std::find_if(boneWeights.begin(), boneWeights.end(),
+			[weight](const Pair& p) { return weight > p.second; });
+
+		boneWeights.insert(findIt, Pair(boneIndex, weight)); // ※ 코드 좋다. 유용하고..
+	}
+
+
+	asBlendWeight GetBlendWeight()
+	{
+		asBlendWeight blendWeight;
+
+		if (boneWeights.size() > 4)
+			assert(0);
+
+		for (uint32 i = 0; i < boneWeights.size(); i++)
+		{
+			blendWeight.Set(i, boneWeights[i].first, boneWeights[i].second);
+		}
+
+		return blendWeight;
+	}
+
+
+
+	
+	void Normalize()
+	{
+		if (boneWeights.size() > 4)
+			boneWeights.resize(4);
+
+		float totalWeight = 0.f;
+		for (const Pair& item : boneWeights)
+			totalWeight += item.second;
+
+		float invTotalWeight = 1.f / totalWeight;
+		for (Pair& item : boneWeights)
+			item.second *= invTotalWeight;
+	}
+};
+
+
+struct asKeyframeData
+{
+	float time;
+	Vec3 scale;
+	Quaternion rotation;
+	Vec3 translation;
+
+};
+
+struct asKeyframe
+{
+	string boneName;
+	vector<asKeyframeData> transforms;
+};
+
+struct asAnimation
+{
+	string name;
+	uint32 frameCount;
+	float frameRate;
+	float duration;
+	vector<asKeyframe> keyframes;
+
+};
+
+// Cache
+struct asAnimationNode
+{
+	aiString name;
+	vector<asKeyframeData> keyframe;
+};

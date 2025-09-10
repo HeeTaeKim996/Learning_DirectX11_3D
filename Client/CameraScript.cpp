@@ -64,7 +64,8 @@ void CameraScript::Update()
 	_mousePos = mousePos;
 	if (fabs(diffX) > 1e-0)
 	{
-		GetTransform()->AddYawRotation(-diffX * 0.4f);
+		//GetTransform()->AddYawRotation(-diffX * 0.4f);
+		GetTransform()->AddUnitYRotation(-diffX * 0.4f);
 	}
 	if (fabs(diffY) > 1e-0)
 	{

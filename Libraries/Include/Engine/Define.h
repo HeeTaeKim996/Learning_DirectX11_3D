@@ -26,7 +26,7 @@ public:										\
 #define DT			TIME->GetDeltaTime()
 #define RESOURCES	ResourceManager::GetInstance()
 #define RENDER		RenderManager::GetInstance()
-
+#define GUI			ImGuiManager::GetInstance()
 
 #endif 
 

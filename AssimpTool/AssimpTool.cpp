@@ -4,34 +4,14 @@
 
 void AssimpTool::Init()
 {
-	//{
-	//	shared_ptr<Converter> converter = make_shared<Converter>();
-
-	//	// FBX -> Memory
-	//	converter->ReadAssetFile(L"House/House.fbx");
+	CreateModelData(L"Tower", L"Tower");
+	//CreateModelDataByName(L"Tank", L"Tank");
+	//CreateModelDataByName(L"Kachujin", L"Mesh");
 
 
-	//	// Memory -> CustomData
-	//	converter->ExportMaterialData(L"House/House");
-	//	converter->ExportModelData(L"House/House");
-
-	//	// CustomData -> Memory
-	//}
-
-
-	{
-		shared_ptr<Converter> converter = make_shared<Converter>();
-
-		// FBX -> Memory
-		converter->ReadAssetFile(L"Tower/Tower.fbx");
-
-
-		// Memory -> CustomData
-		converter->ExportMaterialData(L"Tower/Tower");
-		converter->ExportModelData(L"Tower/Tower");
-
-		// CustomData -> Memory
-	}
+	CreateAnimationData(L"Kachujin", L"Idle");
+	CreateAnimationData(L"Kachujin", L"Run");
+	CreateAnimationData(L"Kachujin", L"Slash");
 }
 
 void AssimpTool::Update()
@@ -42,4 +22,26 @@ void AssimpTool::Update()
 void AssimpTool::Render()
 {
 
+}
+
+void AssimpTool::CreateModelData(wstring folerPath, wstring meshName)
+{
+	// ※ 규약이 필요한데, Assets 파일에 해당 FBX 모델을 담은, FBX 모델명과 동일한 파일명 필요
+	wstring fbxPath = folerPath + L"/" + meshName + L".fbx";
+	wstring exportPath = folerPath + L"/" + folerPath;
+
+	shared_ptr<Converter> converter = make_shared<Converter>();
+	converter->ReadAssetFile(fbxPath);
+	converter->ExportMaterialData(exportPath);
+	converter->ExportModelData(exportPath);
+}
+
+void AssimpTool::CreateAnimationData(wstring folerPath, wstring animationName)
+{
+	wstring fbxPath = folerPath + L"/" + animationName + L".fbx";
+	wstring exportPath = folerPath + L"/" + animationName;
+
+	shared_ptr<Converter> converter = make_shared<Converter>();
+	converter->ReadAssetFile(fbxPath);
+	converter->ExportAnimationData(exportPath);
 }

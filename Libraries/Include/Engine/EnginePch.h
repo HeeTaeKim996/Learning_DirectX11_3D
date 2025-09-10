@@ -43,12 +43,26 @@ using namespace Microsoft::WRL;
 #include <FX11/d3dx11effect.h>
 
 
-// Assim : 리소스 로드를 위한 외부 라이브러리
+// Assimp : 리소스 로드를 위한 외부 라이브러리
 // ※ 외부 Assimp 라이브러리 다운 받는 간략한 과정(CMake 포함)은, 55.Assimp 강의 참조
 #include <Assimp/Importer.hpp>
 #include <Assimp/scene.h>
 #include <Assimp/postprocess.h>
 #pragma comment(lib, "Assimp/assimp-vc143-mtd.lib")
+
+
+
+// ImGUI // 외브 라이브러리. 강의 60.ImGUI 참조
+#include "imgui.h"
+#include "imgui_impl_dx11.h"
+#include "imgui_impl_win32.h"
+
+
+
+
+
+
+
 
 
 // Extern Libs

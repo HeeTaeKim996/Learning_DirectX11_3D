@@ -39,6 +39,14 @@ struct MaterialDesc
 };
 
 
+// Bone
+#define MAX_BONE_TRANSFORMS 50
+
+struct BoneDesc
+{
+	Matrix transforms[MAX_BONE_TRANSFORMS];
+};
+
 
 
 class RenderManager
@@ -61,7 +69,7 @@ public:
 	void PushTransformData(const TransformDesc& desc);
 	void PushLightData(const LightDesc& desc);
 	void PushMaterialData(const MaterialDesc& desc);
-
+	void PushBoneData(const BoneDesc& desc);
 
 private:
 	shared_ptr<Shader> _shader;
@@ -83,5 +91,9 @@ private:
 	shared_ptr<ConstantBuffer<MaterialDesc>> _materialBuffer;
 	ComPtr<ID3DX11EffectConstantBuffer> _materialEffectBuffer;
 
+	BoneDesc _boneDesc;
+	shared_ptr<ConstantBuffer<BoneDesc>> _boneBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer> _boneEffectBuffer;
 };
+
 

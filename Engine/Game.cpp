@@ -3,8 +3,15 @@
 #include "IExecute.h"
 #include "TimeManager.h"
 #include "InputManager.h"
+#include "ImGuiManager.h"
 
-#if 0
+#if 1
+
+
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+// ※ 원리 모름. 강의 60.IMGui 대로 
+
+
 WPARAM Game::Run(GameDesc& desc)
 {
 	_desc = desc;
@@ -20,6 +27,7 @@ WPARAM Game::Run(GameDesc& desc)
 	GRAPHICS->Init(_desc.hWnd);
 	TIME->Init();
 	INPUT->Init(_desc.hWnd);
+	USE_I_M_G_U_I_I_N_D_X_1_1->Init(); // ※ 원리 모름.. 강의 60.ImGUI 에서 하란대로 함..
 	
 	_desc.app->Init();
 
@@ -82,6 +90,11 @@ BOOL Game::InitInstance(int cmdShow)
 
 LRESULT CALLBACK Game::WndProc(HWND handle, UINT message, WPARAM wParam, LPARAM lParam)
 {
+	if (ImGui_ImplWin32_WndProcHandler(handle, message, wParam, lParam))
+		return true; 
+	// ※ 원리 모름. 강의 60.ImGUI 에서 하란대로
+
+
 	switch (message)
 	{
 	case WM_SIZE:
@@ -102,8 +115,14 @@ void Game::Update()
 
 	GRAPHICS->RenderBegin();
 
+
+	USE_I_M_G_U_I_I_N_D_X_1_1->Update(); // ※ 강의 60.ImGUI 참조
+
+
 	_desc.app->Update();
 	_desc.app->Render();
+
+	USE_I_M_G_U_I_I_N_D_X_1_1->Render();
 
 	GRAPHICS->RenderEnd();
 }
@@ -167,7 +186,7 @@ void Game::Update()
 
 
 
-#if 1 //First
+#if 0 //First
 WPARAM Game::Run(GameDesc& desc)
 {
 	_desc = desc;

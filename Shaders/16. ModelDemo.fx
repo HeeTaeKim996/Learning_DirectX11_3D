@@ -1,12 +1,25 @@
 #include "00. Global.fx"
 #include "00. Light.fx"
 
-float4 MaterialEmissive;
+
+#define MAX_MODEL_TRANSFORMS 50
+
+cbuffer BoneBuffer
+{
+    matrix BoneTransforms[MAX_MODEL_TRANSFORMS];
+};
+
+uint BoneIndex;
+
+
+//float4 MaterialEmissive;
 
 MeshOutput VS(VertexTextureNormalTanget input)
 {
     MeshOutput output;
-    output.position = mul(input.position, W);
+    
+    output.position = mul(input.position, BoneTransforms[BoneIndex]);
+    output.position = mul(output.position, W);
     output.worldPosition = output.position.xyz; // 순서 주의. W 적용후의 pos
 
     output.position = mul(output.position, VP);

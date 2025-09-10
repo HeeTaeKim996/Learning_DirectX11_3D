@@ -11,6 +11,15 @@
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\GeometryHelper.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Graphics.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\IExecute.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\imconfig.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\imgui.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\ImGuiManager.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\imgui_impl_dx11.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\imgui_impl_win32.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\imgui_internal.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\imstb_rectpack.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\imstb_textedit.h
+  C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\imstb_truetype.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\IndexBuffer.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\InputManager.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Material.h
@@ -37,7 +46,7 @@
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Utils.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\VertexBuffer.h
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\VertexData.h
-  38개 파일이 복사되었습니다.
+  47개 파일이 복사되었습니다.
   C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\SimpleMath.inl
   1개 파일이 복사되었습니다.
   pch.cpp
@@ -46,19 +55,19 @@
   ConstantBuffer.cpp
   FileUtils.cpp
   Game.cpp
-C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(230,33): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
-  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
-  
-C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(230,33): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
-  
-C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(230,46): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
-  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
-  
-C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(230,46): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
-  
   GameObject.cpp
+C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(76,33): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(76,33): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(76,46): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(76,46): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
+  
   Geometry.cpp
   GeometryHelper.cpp
   Graphics.cpp
@@ -80,7 +89,7 @@ C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(
   Monobehaviour.cpp
   MyMathUtils.cpp
   코드를 생성하고 있습니다...
-C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(261,1): warning C4715: 'Game::WndProc': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(109,1): warning C4715: 'Game::WndProc': 모든 제어 경로에서 값을 반환하지는 않습니다.
   컴파일하고 있습니다...
   Pass.cpp
   RenderManager.cpp
@@ -138,5 +147,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.3412
   VertexBuffer.cpp
   VertexData.cpp
   코드를 생성하고 있습니다...
+  imgui.cpp
+  ImGuiManager.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+  imgui_impl_win32.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
   tinyxml2.cpp
+  코드를 생성하고 있습니다...
   Engine.vcxproj -> C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Libraries\Lib\Engine\Engine.lib

@@ -18,24 +18,50 @@ void ModelRenderer::Update()
 	if (_model == nullptr)
 		return;
 
-	Matrix world = GetTransform()->GetSRT();
-	RENDER->PushTransformData(TransformDesc{ world });
-
-	vector<shared_ptr<ModelMesh>>& meshes = _model->GetMeshes();
-	for (shared_ptr<ModelMesh>& mesh : meshes)
+	// Bones
 	{
-		if (mesh->material)
+		BoneDesc boneDesc;
+
+		vector<shared_ptr<ModelBone>>& bones = _model->GetBone();
+		const uint32 boneCount = _model->GetBoneCount();
+		for (uint32 i = 0; i < boneCount; i++)
 		{
-			mesh->material->Update();
+			shared_ptr<ModelBone> bone = bones[i];
+			boneDesc.transforms[i] = bone->transform;
 		}
+		RENDER->PushBoneData(boneDesc);
+	}
 
-		uint32 stride = mesh->vertexBuffer->GetStride();
-		uint32 offset = mesh->vertexBuffer->GetOffset();
 
-		DC->IASetVertexBuffers(0, 1, mesh->vertexBuffer->GetComPtr().GetAddressOf(), &stride, &offset);
-		DC->IASetIndexBuffer(mesh->indexBuffer->GetComPtr().Get(), DXGI_FORMAT_R32_UINT, 0);
 
-		_shader->DrawIndexed(0, _pass, mesh->indexBuffer->GetCount(), 0, 0);
+	// Transform
+	{
+		Matrix world = GetTransform()->GetSRT();
+		RENDER->PushTransformData(TransformDesc{ world });
+
+		vector<shared_ptr<ModelMesh>>& meshes = _model->GetMeshes();
+		for (shared_ptr<ModelMesh>& mesh : meshes)
+		{
+			if (mesh->material)
+			{
+				mesh->material->Update();
+			}
+
+
+			// BoneIndex
+			_shader->GetScalar("BoneIndex")->SetInt(mesh->boneIndex);
+			
+
+
+
+			uint32 stride = mesh->vertexBuffer->GetStride();
+			uint32 offset = mesh->vertexBuffer->GetOffset();
+
+			DC->IASetVertexBuffers(0, 1, mesh->vertexBuffer->GetComPtr().GetAddressOf(), &stride, &offset);
+			DC->IASetIndexBuffer(mesh->indexBuffer->GetComPtr().Get(), DXGI_FORMAT_R32_UINT, 0);
+
+			_shader->DrawIndexed(0, _pass, mesh->indexBuffer->GetCount(), 0, 0);
+		}
 	}
 }
 
