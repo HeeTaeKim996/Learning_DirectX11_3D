@@ -33,6 +33,7 @@ cbuffer BoneBuffer
 uint BoneIndex;
 Texture2DArray TransformMap;
 
+/*
 Matrix GetAnimationMatrix(VertexTextureNormalTangetBlend input)
 {
     float indices[4] = { input.blendIndices.x, input.blendIndices.y, input.blendIndices.z, 
@@ -42,6 +43,7 @@ Matrix GetAnimationMatrix(VertexTextureNormalTangetBlend input)
     
     int animIndex = keyframes.animIndex;
     int currentFrame = keyframes.currentFrame;
+
 
     float4 c0, c1, c2, c3;
     Matrix transform = 0;
@@ -56,6 +58,55 @@ Matrix GetAnimationMatrix(VertexTextureNormalTangetBlend input)
         Matrix curr = matrix(c0, c1, c2, c3);
         transform += mul(weights[i], curr); 
         // 행렬은 분배 법칙이 성립하니, += 로도 가능 [ (a+b+c+d)v = av +bv + cv + dv ]
+    }
+
+    return transform;
+}
+*/
+
+Matrix GetAnimationMatrix(VertexTextureNormalTangetBlend input)
+{
+    float indices[4] =
+    {
+        input.blendIndices.x, input.blendIndices.y, input.blendIndices.z,
+        input.blendIndices.w
+    };
+    float weights[4] =
+    {
+        input.blendWeights.x, input.blendWeights.y, input.blendWeights.z,
+        input.blendWeights.w
+    };
+    
+    int animIndex = keyframes.animIndex;
+    int currentFrame = keyframes.currentFrame;
+    int nextFrame = keyframes.nextFrame;
+    float ratio = keyframes.ratio;
+
+    float4 c0, c1, c2, c3;
+    float4 n0, n1, n2, n3;
+    
+    Matrix transform = 0;
+    
+    for (int i = 0; i < 4; i++)
+    {
+        c0 = TransformMap.Load(int4(indices[i] * 4 + 0, currentFrame, animIndex, 0));
+        c1 = TransformMap.Load(int4(indices[i] * 4 + 1, currentFrame, animIndex, 0));
+        c2 = TransformMap.Load(int4(indices[i] * 4 + 2, currentFrame, animIndex, 0));
+        c3 = TransformMap.Load(int4(indices[i] * 4 + 3, currentFrame, animIndex, 0));
+        Matrix curr = matrix(c0, c1, c2, c3);
+        
+        n0 = TransformMap.Load(int4(indices[i] * 4 + 0, nextFrame, animIndex, 0));
+        n1 = TransformMap.Load(int4(indices[i] * 4 + 1, nextFrame, animIndex, 0));
+        n2 = TransformMap.Load(int4(indices[i] * 4 + 2, nextFrame, animIndex, 0));
+        n3 = TransformMap.Load(int4(indices[i] * 4 + 3, nextFrame, animIndex, 0));
+        Matrix next = matrix(n0, n1, n2, n3);
+
+        Matrix result = lerp(curr, next, ratio);
+
+        transform += mul(weights[i], result);
+        // 행렬은 분배 법칙이 성립하니, += 로도 가능 [ (a+b+c+d)v = av +bv + cv + dv ]
+
+        // ※ 현재는 프레임 간 보간이지만, 애니매이션 간 보간 도 같은 방법으로 사용!
     }
 
     return transform;

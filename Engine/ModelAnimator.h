@@ -40,7 +40,8 @@ private:
 
 
 private:
-	KeyframeDesc _keyframeDesc;
+	//KeyframeDesc _keyframeDesc;
+	TweenDesc _tweenDesc;
 
 
 

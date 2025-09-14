@@ -63,6 +63,9 @@
     <ContentFile>
       <FullPath>C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\17. AnimationDemo.cso</FullPath>
     </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\18. TweenDemo.cso</FullPath>
+    </ContentFile>
   </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />

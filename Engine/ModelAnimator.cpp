@@ -4,6 +4,7 @@
 #include "ModelMesh.h"
 #include "Model.h"
 #include "ModelAnimation.h"
+#include "TimeManager.h"
 
 ModelAnimator::ModelAnimator(shared_ptr<Shader> shader) : Super(ComponentType::Animator), _shader(shader)
 {
@@ -12,7 +13,7 @@ ModelAnimator::ModelAnimator(shared_ptr<Shader> shader) : Super(ComponentType::A
 ModelAnimator::~ModelAnimator()
 {
 }
-
+/*
 void ModelAnimator::Update()
 {
 	if (_model == nullptr)
@@ -34,6 +35,240 @@ void ModelAnimator::Update()
 
 	// 애니매이션 현재 프레임 정보
 	RENDER->PushKeyframeData(_keyframeDesc);
+
+	// SRV 를 통해 정보 전달
+	_shader->GetSRV("TransformMap")->SetResource(_srv.Get());
+
+
+	// Bones
+	{
+		BoneDesc boneDesc;
+
+		vector<shared_ptr<ModelBone>>& bones = _model->GetBone();
+		const uint32 boneCount = _model->GetBoneCount();
+		for (uint32 i = 0; i < boneCount; i++)
+		{
+			shared_ptr<ModelBone> bone = bones[i];
+			//boneDesc.transforms[i] = bone->transform;
+			boneDesc.transforms[i] = bone->transform;
+		}
+		RENDER->PushBoneData(boneDesc);
+	}
+
+
+
+	// Transform
+	{
+		Matrix world = GetTransform()->GetSRT();
+		RENDER->PushTransformData(TransformDesc{ world });
+
+		vector<shared_ptr<ModelMesh>>& meshes = _model->GetMeshes();
+		for (shared_ptr<ModelMesh>& mesh : meshes)
+		{
+			if (mesh->material)
+			{
+				mesh->material->Update();
+			}
+
+
+			// BoneIndex
+			_shader->GetScalar("BoneIndex")->SetInt(mesh->boneIndex);
+
+
+			uint32 stride = mesh->vertexBuffer->GetStride();
+			uint32 offset = mesh->vertexBuffer->GetOffset();
+
+			DC->IASetVertexBuffers(0, 1, mesh->vertexBuffer->GetComPtr().GetAddressOf(), &stride, &offset);
+			DC->IASetIndexBuffer(mesh->indexBuffer->GetComPtr().Get(), DXGI_FORMAT_R32_UINT, 0);
+
+			_shader->DrawIndexed(0, _pass, mesh->indexBuffer->GetCount(), 0, 0);
+		}
+	}
+}
+*/
+
+/*
+void ModelAnimator::Update()
+{
+	if (_model == nullptr)
+		return;
+	if (_texture == nullptr) // 초기화 작업에서 하는 게 좋을텐데. 우선 강의에서 Update에서 하니 Update 에서 처리
+	{
+		CreateTexture();
+	}
+
+
+	_keyframeDesc.sumTime += DT;
+
+	shared_ptr<ModelAnimation> currentAnimation = _model->GetAnimationByIndex(_keyframeDesc.animIndex);
+	if (currentAnimation)
+	{
+		float timePerFrame = 1.f / (currentAnimation->frameRate * _keyframeDesc.speed);
+		if (_keyframeDesc.sumTime >= timePerFrame)
+		{
+			_keyframeDesc.sumTime = 0.f;
+			_keyframeDesc.currentFrame = (_keyframeDesc.currentFrame + 1) % currentAnimation->frameCount;
+			_keyframeDesc.nextFrame = (_keyframeDesc.currentFrame + 1) % currentAnimation->frameCount;
+		}
+
+		_keyframeDesc.ratio = (_keyframeDesc.sumTime / timePerFrame);
+	}
+
+	// GUI 로 _keyframeDesc 조작 (임시)
+	{
+		ImGui::InputInt("AnimIndex", &_keyframeDesc.animIndex);
+		_keyframeDesc.animIndex %= _model->GetAnimationCount();
+		ImGui::InputFloat("Speed", &_keyframeDesc.speed, 0.5f, 4.f);
+	}
+
+
+	// 애니매이션 현재 프레임 정보
+	RENDER->PushKeyframeData(_keyframeDesc);
+
+	// SRV 를 통해 정보 전달
+	_shader->GetSRV("TransformMap")->SetResource(_srv.Get());
+
+
+	// Bones
+	{
+		BoneDesc boneDesc;
+
+		vector<shared_ptr<ModelBone>>& bones = _model->GetBone();
+		const uint32 boneCount = _model->GetBoneCount();
+		for (uint32 i = 0; i < boneCount; i++)
+		{
+			shared_ptr<ModelBone> bone = bones[i];
+			//boneDesc.transforms[i] = bone->transform;
+			boneDesc.transforms[i] = bone->transform;
+		}
+		RENDER->PushBoneData(boneDesc);
+	}
+
+
+
+	// Transform
+	{
+		Matrix world = GetTransform()->GetSRT();
+		RENDER->PushTransformData(TransformDesc{ world });
+
+		vector<shared_ptr<ModelMesh>>& meshes = _model->GetMeshes();
+		for (shared_ptr<ModelMesh>& mesh : meshes)
+		{
+			if (mesh->material)
+			{
+				mesh->material->Update();
+			}
+
+
+			// BoneIndex
+			_shader->GetScalar("BoneIndex")->SetInt(mesh->boneIndex);
+
+
+			uint32 stride = mesh->vertexBuffer->GetStride();
+			uint32 offset = mesh->vertexBuffer->GetOffset();
+
+			DC->IASetVertexBuffers(0, 1, mesh->vertexBuffer->GetComPtr().GetAddressOf(), &stride, &offset);
+			DC->IASetIndexBuffer(mesh->indexBuffer->GetComPtr().Get(), DXGI_FORMAT_R32_UINT, 0);
+
+			_shader->DrawIndexed(0, _pass, mesh->indexBuffer->GetCount(), 0, 0);
+		}
+	}
+}
+*/
+
+void ModelAnimator::Update()
+{
+	if (_model == nullptr)
+		return;
+	if (_texture == nullptr) // 초기화 작업에서 하는 게 좋을텐데. 우선 강의에서 Update에서 하니 Update 에서 처리
+	{
+		CreateTexture();
+	}
+
+
+	TweenDesc& desc = _tweenDesc;
+
+
+	// 현재 애니매이션 (firstAnim)
+	{
+		desc.currentDesc.sumTime += DT;
+
+		shared_ptr<ModelAnimation> firstAnim =
+			_model->GetAnimationByIndex(desc.currentDesc.animIndex);
+		if (firstAnim)
+		{
+			float timePerFrame = 1.f / (firstAnim->frameRate * desc.currentDesc.speed);
+			if (desc.currentDesc.sumTime >= timePerFrame)
+			{
+				desc.currentDesc.sumTime = 0;
+				desc.currentDesc.currentFrame
+					= (desc.currentDesc.currentFrame + 1) % firstAnim->frameCount;
+				desc.currentDesc.nextFrame
+					= (desc.currentDesc.currentFrame + 1) % firstAnim->frameCount;
+			}
+			desc.currentDesc.ratio = (desc.currentDesc.sumTime / timePerFrame);
+		}
+	}
+
+	// 다음 애니매이션( secondAnim) - 보간할 애니매이션이 있다면..
+	if (desc.reservedDesc.animIndex >= 0)
+	{
+		desc.tweenSumTime += DT;
+		desc.tweenRatio = desc.tweenSumTime / desc.tweenDuration;
+
+		if (desc.tweenRatio >= 1.f)
+		{
+			// 애니매이션 교체 성공
+			desc.currentDesc = desc.reservedDesc;
+			desc.ClearReservedAnim();
+		}
+		else
+		{
+			// 교체중
+			shared_ptr<ModelAnimation> reservedAnim 
+				= _model->GetAnimationByIndex(desc.reservedDesc.animIndex);
+			desc.reservedDesc.sumTime += DT;
+
+			float timePerFrame = 1.f / (reservedAnim->frameRate * desc.reservedDesc.speed);
+			if (desc.reservedDesc.ratio >= 1.f)
+			{
+				desc.reservedDesc.sumTime = 0.f;
+
+				desc.reservedDesc.currentFrame 
+					= (desc.reservedDesc.currentFrame + 1) % reservedAnim->frameCount;
+				desc.reservedDesc.nextFrame
+					= (desc.reservedDesc.currentFrame + 1) % reservedAnim->frameCount;
+			}
+
+			desc.reservedDesc.ratio = desc.reservedDesc.sumTime / timePerFrame;
+		}
+
+	}
+
+	// GUI 로 _keyframeDesc 조작 (임시)
+	{
+		ImGui::InputInt("AnimIndex", &desc.currentDesc.animIndex);
+		desc.currentDesc.animIndex %= _model->GetAnimationCount();
+
+
+		static int32 nextAnimIndex = 0;
+		if (ImGui::InputInt("NextAnimIndex", &nextAnimIndex))
+		{
+			nextAnimIndex %= _model->GetAnimationCount();
+			desc.ClearReservedAnim(); // 기존 거 밀어주기
+			desc.reservedDesc.animIndex = nextAnimIndex;
+		}
+		if (_model->GetAnimationCount())
+		{
+			desc.currentDesc.animIndex %= _model->GetAnimationCount();
+		}
+
+		ImGui::InputFloat("Speed", &desc.currentDesc.speed, 0.5f, 4.f);
+	}
+
+
+	// 애니매이션 현재 프레임 정보
+	RENDER->PushTweenData(desc);
 
 	// SRV 를 통해 정보 전달
 	_shader->GetSRV("TransformMap")->SetResource(_srv.Get());
@@ -229,7 +464,7 @@ void ModelAnimator::CreateAnimationTransform(uint32 index)
 			}
 
 			tempAnimBoneTransforms[b] = animLocal.LocalToWorld(parentAnimWorld);
-			
+
 
 			TransformBase worldTransform(bone->transform);
 			TransformBase invWorldTransform = worldTransform.Inverse();
@@ -239,7 +474,8 @@ void ModelAnimator::CreateAnimationTransform(uint32 index)
 
 
 
-// DEBUG
+			// DEBUG
+#if 0
 #include "ETCUtils.h"
 			if (f == 1 && b == 1)
 			{
@@ -251,7 +487,7 @@ void ModelAnimator::CreateAnimationTransform(uint32 index)
 				ModelKeyframeData& data = frame->transforms[f];
 				::fprintf(file, "%f, %f, %f, %f\n",
 					data.rotation.X, data.rotation.Y, data.rotation.Z, data.rotation.W);
-				
+
 				::fprintf(file, "1\n");
 				ETCUtils_AddMyMatrixToCls(file, animLocal.GetSRT());
 
@@ -267,7 +503,7 @@ void ModelAnimator::CreateAnimationTransform(uint32 index)
 						invMat[i][0], invMat[i][1], invMat[i][2], invMat[i][3]);
 				}
 
-				
+
 				::fprintf(file, "AnimMat\n");
 				myMatrix4x4 animMat = tempAnimBoneTransforms[b].GetSRT();
 				for (int i = 0; i < 4; i++)
@@ -293,7 +529,8 @@ void ModelAnimator::CreateAnimationTransform(uint32 index)
 
 
 
-			}
 		}
+#endif
 	}
+}
 }

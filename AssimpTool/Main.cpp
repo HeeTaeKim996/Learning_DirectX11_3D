@@ -14,6 +14,7 @@
 #include "StaticMeshDemo.h"
 #include "ImGUIDemo.h"
 #include "AnimationDemo.h"
+#include "TweenDemo.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
@@ -32,7 +33,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	//desc.app = make_shared<AssimpTool>();
 	//desc.app = make_shared<StaticMeshDemo>();
-	desc.app = make_shared<AnimationDemo>();
+	desc.app = make_shared<TweenDemo>();
 
 
 

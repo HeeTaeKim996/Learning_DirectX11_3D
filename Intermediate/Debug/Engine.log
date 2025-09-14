@@ -59,9 +59,6 @@
   ETCUtils.cpp
   FileUtils.cpp
   Game.cpp
-  GameObject.cpp
-  Geometry.cpp
-  GeometryHelper.cpp
 C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(76,33): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
   (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
   
@@ -74,6 +71,9 @@ C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(
 C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Game.cpp(76,46): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 '/Game.cpp'을(를) 컴파일하는 중)
   
+  GameObject.cpp
+  Geometry.cpp
+  GeometryHelper.cpp
   Graphics.cpp
 C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Engine\Graphics.cpp(39,46): warning C4244: '=': 'float'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 '/Graphics.cpp'을(를) 컴파일하는 중)
@@ -126,7 +126,6 @@ C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(
   TimeManager.cpp
   Transform.cpp
   Utils.cpp
-  VertexBuffer.cpp
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(4689,18): warning C4244: '=': 'wchar_t'에서 'char'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 '/Utils.cpp'을(를) 컴파일하는 중)
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xutility(4689,18):
@@ -160,6 +159,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.3412
               _SizeTy=unsigned __int64
           ]
   
+  VertexBuffer.cpp
   VertexData.cpp
   코드를 생성하고 있습니다...
   imgui.cpp
