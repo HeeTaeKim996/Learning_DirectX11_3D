@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myQuaternion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Converter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|solutionrelative:AssimpTool\\Converter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|solutionrelative:AssimpTool\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|solutionrelative:AssimpTool\\Main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myQuaternion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\TransformBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -19,20 +27,12 @@
       "RelativeMoniker": "D:0:0:{4F5C1012-31BD-4947-831E-BF2CC095398F}|Engine\\Engine.vcxproj|solutionrelative:Engine\\ModelAnimator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Converter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|solutionrelative:AssimpTool\\Converter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myMatrix4x4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2C2E742C-7033-47A7-B73E-8B7C64B1DE6E}|MyMath\\MyMath.vcxproj|solutionrelative:MyMath\\myMatrix4x4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\AssimpTool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|solutionrelative:AssimpTool\\AssimpTool.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|solutionrelative:AssimpTool\\Main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D341F69-399C-42A3-8283-59D6D02E1C44}|AssimpTool\\AssimpTool.vcxproj|C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\AssimpTool.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -754,7 +754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Main.h",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Main.h",
               "RelativeDocumentMoniker": "AssimpTool\\Main.h",
@@ -762,7 +762,8 @@
               "RelativeToolTip": "AssimpTool\\Main.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-09-07T04:43:24.371Z"
+              "WhenOpened": "2025-09-07T04:43:24.371Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -772,7 +773,7 @@
               "RelativeDocumentMoniker": "AssimpTool\\Main.cpp",
               "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Main.cpp",
               "RelativeToolTip": "AssimpTool\\Main.cpp",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAACEAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-12T09:13:24.781Z",
               "EditorCaption": ""
@@ -1908,7 +1909,7 @@
         },
         {
           "DockedWidth": 196,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -1917,18 +1918,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ModelAnimator.cpp",
-              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\ModelAnimator.cpp",
-              "RelativeDocumentMoniker": "Engine\\ModelAnimator.cpp",
-              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\ModelAnimator.cpp",
-              "RelativeToolTip": "Engine\\ModelAnimator.cpp",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAUwOUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-12T02:11:14.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "myQuaternion.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myQuaternion.cpp",
               "RelativeDocumentMoniker": "MyMath\\myQuaternion.cpp",
@@ -1936,12 +1925,11 @@
               "RelativeToolTip": "MyMath\\myQuaternion.cpp",
               "ViewState": "AgIAAN8AAAAAAAAAAAArwAIBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-13T09:29:05.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T09:29:05.411Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TransformBase.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\TransformBase.cpp",
               "RelativeDocumentMoniker": "MyMath\\TransformBase.cpp",
@@ -1953,7 +1941,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "myMatrix4x4.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\MyMath\\myMatrix4x4.cpp",
               "RelativeDocumentMoniker": "MyMath\\myMatrix4x4.cpp",
@@ -1965,7 +1953,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "Converter.cpp",
+              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Converter.cpp",
+              "RelativeDocumentMoniker": "AssimpTool\\Converter.cpp",
+              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Converter.cpp",
+              "RelativeToolTip": "AssimpTool\\Converter.cpp",
+              "ViewState": "AgIAALcCAAAAAAAAAAArwNoCAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-12T04:32:40.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ModelAnimator.cpp",
+              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\ModelAnimator.cpp",
+              "RelativeDocumentMoniker": "Engine\\ModelAnimator.cpp",
+              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\Engine\\ModelAnimator.cpp",
+              "RelativeToolTip": "Engine\\ModelAnimator.cpp",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAUwOUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-12T02:11:14.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "AssimpTool.cpp",
               "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\AssimpTool.cpp",
               "RelativeDocumentMoniker": "AssimpTool\\AssimpTool.cpp",
@@ -1974,18 +1987,6 @@
               "ViewState": "AgIAAAEAAAAAAAAAAAArwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-08T03:14:18.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Converter.cpp",
-              "DocumentMoniker": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Converter.cpp",
-              "RelativeDocumentMoniker": "AssimpTool\\Converter.cpp",
-              "ToolTip": "C:\\Users\\Heetae\\source\\repos\\Learning_DirectX11\\LearningDX11\\Learning_DirectX11(3D)\\AssimpTool\\Converter.cpp",
-              "RelativeToolTip": "AssimpTool\\Converter.cpp",
-              "ViewState": "AgIAAJwCAAAAAAAAAAArwLoCAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-12T04:32:40.191Z"
             },
             {
               "$type": "Document",

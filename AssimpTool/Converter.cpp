@@ -648,9 +648,9 @@ shared_ptr<vector<asKeyframeData>> Converter::ParseAnimationNode(shared_ptr<asAn
 			aiQuatKey key = srcNode->mRotationKeys[k];
 			frameData.time = (float)key.mTime;
 
-			frameData.rotation.X = key.mValue.x;
-			frameData.rotation.Y = key.mValue.y;
-			frameData.rotation.Z = key.mValue.z;
+			frameData.rotation.X = -key.mValue.x;
+			frameData.rotation.Y = -key.mValue.y;
+			frameData.rotation.Z = -key.mValue.z;
 			frameData.rotation.W = key.mValue.w;
 
 			found = true;
@@ -716,7 +716,6 @@ void Converter::ReadKeyframeData(shared_ptr<asAnimation> animation, aiNode* srcN
 		else
 		{
 			frameData = (*findKeyframes)[i];
-			frameData.rotation = frameData.rotation.Inverse();
 		}
 
 		keyframe->transforms.push_back(frameData);
