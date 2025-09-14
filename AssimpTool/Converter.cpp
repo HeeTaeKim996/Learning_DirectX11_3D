@@ -17,6 +17,9 @@ Converter::~Converter()
 
 }
 
+
+
+
 void Converter::ReadAssetFile(wstring file)
 {
 	wstring fileStr = _assetPath + file;
@@ -35,6 +38,27 @@ void Converter::ReadAssetFile(wstring file)
 	assert(_scene != nullptr);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------
+		ModelData
+------------------------*/
 void Converter::ExportModelData(wstring savePath)
 {
 	wstring finalPath = _modelPath + savePath + L".mesh";
@@ -58,7 +82,7 @@ void Converter::ExportModelData(wstring savePath)
 		for (const shared_ptr<asMesh>& mesh : _meshes)
 		{
 			fprintf(file, "\n%s\n", mesh->name.c_str());
-			fprintf(file, 
+			fprintf(file,
 				"posX, posY, posZ, index1, index2, index3, index4, weight1, weight2, weight3, weight4\n");
 			for (UINT i = 0; i < mesh->vertices.size(); i++)
 			{
@@ -78,22 +102,6 @@ void Converter::ExportModelData(wstring savePath)
 
 	WriteModelFile(finalPath);
 }
-void Converter::ExportMaterialData(wstring savePath)
-{
-	wstring finalPath = _texturePath + savePath + L".xml";
-	ReadMaterialData();
-	WriteMaterialData(finalPath);
-}
-
-void Converter::ExportAnimationData(wstring savePath, uint32 index/*=0*/)
-{
-	wstring finalPath = _modelPath + savePath + L".clip";
-	assert(index < _scene->mNumAnimations);
-	
-
-
-}
-
 void Converter::ReadModelData(aiNode* node, int32 index, int32 parent)
 {
 	shared_ptr<asBone> bone = make_shared<asBone>();
@@ -282,6 +290,42 @@ void Converter::WriteModelFile(wstring finalPath)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------
+	 MaterialData
+-------------------*/
+void Converter::ExportMaterialData(wstring savePath)
+{
+	wstring finalPath = _texturePath + savePath + L".xml";
+	ReadMaterialData();
+	WriteMaterialData(finalPath);
+}
+
 void Converter::ReadMaterialData()
 {
 	for (uint32 i = 0; i < _scene->mNumMaterials; i++)
@@ -341,10 +385,6 @@ void Converter::WriteMaterialData(wstring finalPath)
 	// ※ 최종이 확장자이니, parent_path() 는 확장자가 담긴 파일명. 위 코드는 해당 파일을 생성하는 코드 (이미 있다면 X)
 
 	string folder = path.parent_path().string(); 
-	//string folder = path.string();
-	// ※ @@기존 강의 코드인데, 이러면 Texture 에 할당돼서, 아래 코드로 바꿈. 위 코드가 맞는 것 같은데. 왜 이러는지
-	//   이해를 못함. png 와 jpg의 차이인지.. 어떤건 전자가, 어떤건 후자로 해야 작동하네   
-
 
 
 	shared_ptr<tinyxml2::XMLDocument> document = make_shared<tinyxml2::XMLDocument>();
@@ -418,7 +458,15 @@ string Converter::WriteTexture(string saveFolder, string file)
 	const aiTexture* srcTexture = _scene->GetEmbeddedTexture(file.c_str());
 	if (srcTexture)
 	{
-		string pathStr = saveFolder + fileName;
+		//string pathStr = saveFolder + fileName;
+		string pathStr = (filesystem::path(saveFolder) / fileName).string();
+		/*	○ string 의 + 와 filesystem 의 /
+			 - 위의 주석이 달린 부분으로 pathStr 을 만들면, saveFolder의 끝이 \ 가 아닐시, 폴더가 fileNAme 과 단순히
+			   합쳐져서, 파일명이 이상해진다.
+			 - 반면 filesystem 의 / 는, \ 가 없을시, \ 를 추가하여 폴더 를 구분하고, \ 가 이미 있을시, + 와 동일하게
+			   작동한다
+			 - 따라서 filesystem 의 / 를 애용하자
+		*/
 
 		if (srcTexture->mHeight == 0)
 		{
@@ -501,6 +549,42 @@ string Converter::WriteTexture(string saveFolder, string file)
 	*/
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------
+	  AnimationData
+----------------------*/
+
+void Converter::ExportAnimationData(wstring savePath, uint32 index/*=0*/)
+{
+	wstring finalPath = _modelPath + savePath + L".clip";
+	assert(index < _scene->mNumAnimations);
+	shared_ptr<asAnimation> animation = ReadAnimationData(_scene->mAnimations[index]);
+	WriteAnimationData(animation, finalPath);
+}
 shared_ptr<asAnimation> Converter::ReadAnimationData(aiAnimation* srcAnimation)
 {
 	shared_ptr<asAnimation> animation = make_shared<asAnimation>();
@@ -513,8 +597,164 @@ shared_ptr<asAnimation> Converter::ReadAnimationData(aiAnimation* srcAnimation)
 		  
 		  ※ 정확히는 mDuration 의 단위가 프레임이 아닌 Tick 이라 하는데, 프레임 이라는 개념에 더 가까운 것 같다 */
 
+	map<string, shared_ptr<vector<asKeyframeData>>> cacheAnimNodes;
+
+	for (uint32 i = 0; i < srcAnimation->mNumChannels; i++)
+	{
+		aiNodeAnim* srcNode = srcAnimation->mChannels[i];
+
+		// 애니매이션 노드 데이터 파싱
+		shared_ptr<vector<asKeyframeData>> keyframeDatas = ParseAnimationNode(animation, srcNode);
+
+		// 현재 찾은 노드 중에 제일 긴 시간으로 애니매이션 시간 갱신
+		animation->duration = max(animation->duration, keyframeDatas->back().time);
+
+		cacheAnimNodes[srcNode->mNodeName.C_Str()] = keyframeDatas;
+	}
+
+	ReadKeyframeData(animation, _scene->mRootNode, cacheAnimNodes);
+
+	return animation;
+}
+
+shared_ptr<vector<asKeyframeData>> Converter::ParseAnimationNode(shared_ptr<asAnimation> animation, 
+	aiNodeAnim* srcNode)
+{
+	shared_ptr<vector<asKeyframeData>> keyframeDatas = make_shared<vector<asKeyframeData>>();
+	
+	uint32 keyCount = max(max(srcNode->mNumPositionKeys, srcNode->mNumRotationKeys),
+		srcNode->mNumScalingKeys);
+
+	for (uint32 k = 0; k < keyCount; k++)
+	{
+		asKeyframeData frameData;
+
+		bool found = false;
+		uint32 t = keyframeDatas->size();
+
+		// Position
+		if (::fabsf((float)srcNode->mPositionKeys[k].mTime - (float)t) <= 0.0001f)
+		{
+			aiVectorKey key = srcNode->mPositionKeys[k];
+			frameData.time = (float)key.mTime;
+			::memcpy_s(&frameData.translation, sizeof(Vec3), &key.mValue, sizeof(aiVector3D));
+
+			found = true;
+		}
+
+		// Rotation
+		if (::fabsf((float)srcNode->mRotationKeys[k].mTime - (float)t) <= 0.0001f)
+		{
+			aiQuatKey key = srcNode->mRotationKeys[k];
+			frameData.time = (float)key.mTime;
+
+			frameData.rotation.X = key.mValue.x;
+			frameData.rotation.Y = key.mValue.y;
+			frameData.rotation.Z = key.mValue.z;
+			frameData.rotation.W = key.mValue.w;
+
+			found = true;
+		}
+
+		// Scale
+		if (::fabsf((float)srcNode->mScalingKeys[k].mTime - (float)t) <= 0.0001f)
+		{
+			aiVectorKey key = srcNode->mScalingKeys[k];
+			frameData.time = (float)key.mTime;
+			::memcpy_s(&frameData.scale, sizeof(Vec3), &key.mValue, sizeof(aiVector3D));
+
+			found = true;
+		}
+
+		if (found == true)
+		{
+			keyframeDatas->push_back(frameData);
+		}
+	}
+
+	// Keyframe 늘려주기
+	if (keyframeDatas->size() < animation->frameCount)
+	{
+		uint32 count = animation->frameCount - keyframeDatas->size();
+		asKeyframeData keyframe = keyframeDatas->back();
+
+		for (uint32 n = 0; n < count; n++)
+		{ 
+			keyframeDatas->push_back(keyframe);
+		}
+	}
+
+	return keyframeDatas;
 
 
+	/*
+		- 강의 대로 따라 적었지만, 납득이 되지 않는다. mPositionKeys || mRotationKeys || mScalingKeys 중 하나의 
+		  요소들간에 mTime의 차이가 1미만이라면, 이후에는 모든 요소들이 추출이 되지 않을텐데. if 가 아닌 while을 사용하지
+		  않아도 되는 전제가 있다는 건지
+	*/
+}
+
+void Converter::ReadKeyframeData(shared_ptr<asAnimation> animation, aiNode* srcNode,
+	map<string, shared_ptr<vector<asKeyframeData>>>& cache)
+{
+	shared_ptr<asKeyframe> keyframe = make_shared<asKeyframe>();
+	keyframe->boneName = srcNode->mName.C_Str();
+
+	shared_ptr<vector<asKeyframeData>> findKeyframes = cache[srcNode->mName.C_Str()];
+	
+	for (uint32 i = 0; i < animation->frameCount; i++)
+	{
+		asKeyframeData frameData;
+
+		if (findKeyframes == nullptr)
+		{
+			frameData.time = (float)i;
+			Matrix transform(srcNode->mTransformation[0]);
+			transform = transform.Transpose();
+			transform.Decompose(OUT frameData.scale, OUT frameData.rotation, OUT frameData.translation);
+		}
+		else
+		{
+			frameData = (*findKeyframes)[i];
+			frameData.rotation = frameData.rotation.Inverse();
+		}
+
+		keyframe->transforms.push_back(frameData);
+	}
+
+	// 애니매이션 키프레임 채우기
+	animation->keyframes.push_back(keyframe);
+
+	for (uint32 i = 0; i < srcNode->mNumChildren; i++)
+	{
+		ReadKeyframeData(animation, srcNode->mChildren[i], cache);
+	}
+} 
+
+void Converter::WriteAnimationData(shared_ptr<asAnimation> animation, wstring finalPath)
+{
+	filesystem::path path = filesystem::path(finalPath);
+
+	// 폴더가 없으면 만든다
+	filesystem::create_directory(path.parent_path());
+
+	shared_ptr<FileUtils> file = make_shared<FileUtils>();
+	file->Open(finalPath, FileMode::Write);
+
+	file->Write<string>(animation->name);
+	file->Write<float>(animation->duration);
+	file->Write<float>(animation->frameRate);
+	file->Write<uint32>(animation->frameCount);
+
+	file->Write<uint32>(animation->keyframes.size());
+
+	for (shared_ptr<asKeyframe> keyframe : animation->keyframes)
+	{
+		file->Write<string>(keyframe->boneName);
+
+		file->Write<uint32>(keyframe->transforms.size());
+		file->Write(&keyframe->transforms[0], sizeof(asKeyframeData) * keyframe->transforms.size());
+	}
 }
 
 uint32 Converter::GetBoneIndex(const string& name)
@@ -528,6 +768,5 @@ uint32 Converter::GetBoneIndex(const string& name)
 	}
 
 	assert(0);
-
 	return 0;
 }

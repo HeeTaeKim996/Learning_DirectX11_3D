@@ -63,9 +63,11 @@ myVec3& myVec3::operator/=(float InScale)
 {
 	assert(InScale != 0.f);
 
-	X /= InScale;
-	Y /= InScale;
-	Z /= InScale;
+	float invScale = 1.f / InScale;
+
+	X *= invScale;
+	Y *= invScale;
+	Z *= invScale;
 
 	return *this;
 }

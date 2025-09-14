@@ -36,6 +36,9 @@
     <ClInclude Include="ImGUIDemo.h">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="AnimationDemo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -60,6 +63,9 @@
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="ImGUIDemo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationDemo.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>

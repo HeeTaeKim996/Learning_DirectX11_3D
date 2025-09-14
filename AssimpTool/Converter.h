@@ -9,10 +9,12 @@ public:
 	
 public:
 	void ReadAssetFile(wstring file);
-	void ExportModelData(wstring savePath);
-	void ExportMaterialData(wstring savePath);
-	void ExportAnimationData(wstring savePath, uint32 index = 0);
 
+
+
+public:
+	/* Model Data */
+	void ExportModelData(wstring savePath);
 private:
 	void ReadModelData(aiNode* node, int32 index, int32 parent);
 	void ReadMeshData(aiNode* node,int32 bone);
@@ -20,14 +22,24 @@ private:
 	void WriteModelFile(wstring finalPath);
 
 
+public:
+	/* Material Data */
+	void ExportMaterialData(wstring savePath);
 private:
 	void ReadMaterialData();
 	void WriteMaterialData(wstring finalPath);
 	string WriteTexture(string saveFolder, string file);
 
-
+public:
+	/* Animation Data */
+	void ExportAnimationData(wstring savePath, uint32 index = 0);
 private:
 	shared_ptr<asAnimation> ReadAnimationData(aiAnimation* srcAnimation);
+	shared_ptr<vector<asKeyframeData>> ParseAnimationNode(shared_ptr<asAnimation> animation, 
+		aiNodeAnim* srcNode);
+	void ReadKeyframeData(shared_ptr<asAnimation> animation, aiNode* srcNode,
+		map<string, shared_ptr<vector<asKeyframeData>>>& cache);
+	void WriteAnimationData(shared_ptr<asAnimation> animation, wstring finalPath);
 
 
 private:

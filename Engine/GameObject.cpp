@@ -5,8 +5,8 @@
 #include "Transform.h"
 #include "Camera.h"
 #include "MeshRenderer.h"
-//#include "Animator.h"
 #include "ModelRenderer.h"
+#include "ModelAnimator.h"
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	현재 게임 오브젝트의 _components 에 아무 것도 추가를 안한 상태에서, Update로
@@ -135,11 +135,13 @@ shared_ptr<ModelRenderer> GameObject::GetModelRenderer()
 	return static_pointer_cast<ModelRenderer>(component);
 }
 
-//shared_ptr<Animator> GameObject::GetAnimator()
-//{
-//	shared_ptr<Component> component = GetFixedComponent(ComponentType::Animator);
-//	return static_pointer_cast<Animator>(component);
-//}
+shared_ptr<ModelAnimator> GameObject::GetModelAnimator()
+{
+	shared_ptr<Component> component = GetFixedComponent(ComponentType::Animator);
+	return static_pointer_cast<ModelAnimator>(component);
+}
+
+
 
 shared_ptr<Transform> GameObject::GetOrAddTransform()
 {

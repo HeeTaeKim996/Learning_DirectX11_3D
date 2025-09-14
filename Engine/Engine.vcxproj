@@ -170,6 +170,7 @@ xcopy /Y "$(SolutionDir)Engine\*.inl" "$(SolutionDir)Libraries\Include\Engine"</
     <ClInclude Include="ConstantBuffer.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="EnginePch.h" />
+    <ClInclude Include="ETCUtils.h" />
     <ClInclude Include="FileUtils.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
@@ -192,6 +193,8 @@ xcopy /Y "$(SolutionDir)Engine\*.inl" "$(SolutionDir)Libraries\Include\Engine"</
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="MeshRenderer.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="ModelAnimation.h" />
+    <ClInclude Include="ModelAnimator.h" />
     <ClInclude Include="ModelMesh.h" />
     <ClInclude Include="ModelRenderer.h" />
     <ClInclude Include="Monobehaviour.h" />
@@ -217,6 +220,7 @@ xcopy /Y "$(SolutionDir)Engine\*.inl" "$(SolutionDir)Libraries\Include\Engine"</
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="ConstantBuffer.cpp" />
+    <ClCompile Include="ETCUtils.cpp" />
     <ClCompile Include="FileUtils.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -262,6 +266,8 @@ xcopy /Y "$(SolutionDir)Engine\*.inl" "$(SolutionDir)Libraries\Include\Engine"</
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="MeshRenderer.cpp" />
     <ClCompile Include="Model.cpp" />
+    <ClCompile Include="ModelAnimation.cpp" />
+    <ClCompile Include="ModelAnimator.cpp" />
     <ClCompile Include="ModelMesh.cpp" />
     <ClCompile Include="ModelRenderer.cpp" />
     <ClCompile Include="Monobehaviour.cpp" />

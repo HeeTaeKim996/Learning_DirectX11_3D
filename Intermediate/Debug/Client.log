@@ -1,4 +1,66 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: 중간 디렉터리(C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Intermediate\Debug\)에 다른 프로젝트(AssimpTool.vcxproj, Engine.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\00. Global.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\00. Light.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\01. Triangle.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\02. Quad.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\03. ConstantBuffer.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\04. Texture.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\05. Sampler.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\06. Terrain.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\07. Normal.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\08. Mesh.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\09. GlobalTestShader.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\10. Lighting_Ambient.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\11. Lighting_Diffuse.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Shaders\12. Lighting_Specular.fx(14,5-42): warning X3206: implicit truncation of vector type
+C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Shaders\12. Lighting_Specular.fx(10,13-40): warning X3578: Output value 'VS' is not completely initialized
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\12. Lighting_Specular.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Shaders\13. Lighting_Emissive.fx(9,5-42): warning X3206: implicit truncation of vector type
+C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Shaders\13. Lighting_Emissive.fx(5,13-40): warning X3578: Output value 'VS' is not completely initialized
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\13. Lighting_Emissive.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Shaders\14. Lighting.fx(6,13-40): warning X3578: Output value 'VS' is not completely initialized
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\14. Lighting.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\15. NormalMapping.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\16. ModelDemo.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\Heetae\source\repos\Learning_DirectX11\LearningDX11\Learning_DirectX11(3D)\Binaries\17. AnimationDemo.cso
   pch.cpp
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\optional(11): warning STL4038: The contents of <optional> are available only with C++17 or later.
   18. NormalMappingDemo.cpp

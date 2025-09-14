@@ -19,6 +19,8 @@ cbuffer TransformBuffer
 
 
 
+
+
 /*-------------------------
          VertexData
 -------------------------*/
@@ -52,6 +54,16 @@ struct VertexTextureNormalTanget
     float2 uv : TEXCOORD;
     float3 normal : NORMAL;
     float3 tangent : TANGENT;
+};
+
+struct VertexTextureNormalTangetBlend
+{
+    float4 position : POSITION;
+    float2 uv : TEXCOORD;
+    float3 normal : NORMAL;
+    float3 tangent : TANGENT;
+    float4 blendIndices : BLEND_INDICES;
+    float4 blendWeights : BLEND_WEIGHTS;
 };
 
 

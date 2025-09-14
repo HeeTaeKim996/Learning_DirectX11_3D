@@ -35,31 +35,20 @@ TransformBase::TransformBase(const myMatrix4x4& InMatrix)
 
 
 	// 스케일 구하기
-	_scale = myVec3::Zero;
 	const float squareSumX = scaleRotMatrix[0].SizeSquared();
 	const float squareSumY = scaleRotMatrix[1].SizeSquared();
 	const float squareSumZ = scaleRotMatrix[2].SizeSquared();
-	if (squareSumX > SMALL_NUMBER) _scale.X = sqrtf(squareSumX);
-	if (squareSumY > SMALL_NUMBER) _scale.Y = sqrtf(squareSumY);
-	if (squareSumZ > SMALL_NUMBER) _scale.Z = sqrtf(squareSumZ);
 
+	_scale.X = squareSumX > SMALL_NUMBER ? sqrtf(squareSumX) : SMALL_NUMBER;
+	_scale.Y = squareSumY > SMALL_NUMBER ? sqrtf(squareSumY) : SMALL_NUMBER;
+	_scale.Z = squareSumZ > SMALL_NUMBER ? sqrtf(squareSumZ) : SMALL_NUMBER;
 
-	// 크기 요소를 나눠 로테이션 행렬 구하기
-	if (_scale.X == 0 || _scale.Y == 0 || _scale.Z == 0)
-	{
-		_rotation = myQuaternion::Identity; // @@ 이럴 때 어떻게 처리할지 몰라서, 대충 넣음
-	}
-	else
-	{
-		scaleRotMatrix[0] /= _scale.X;
-		scaleRotMatrix[1] /= _scale.Y;
-		scaleRotMatrix[2] /= _scale.Z;
+	scaleRotMatrix[0] /= _scale.X;
+	scaleRotMatrix[1] /= _scale.Y;
+	scaleRotMatrix[2] /= _scale.Z;
 
-		// 사원수로 변환
-		_rotation = myQuaternion(scaleRotMatrix);
-	}
-
-
+	// 사원수로 변환
+	_rotation = myQuaternion(scaleRotMatrix);
 }
 
 
@@ -123,6 +112,7 @@ void TransformBase::AddUnitZRotation(float InDegree)
 	_rotation *= addingRollQuat;
 }
 
+
 myMatrix4x4 TransformBase::GetSRT() const
 {
 	return myMatrix4x4(
@@ -149,7 +139,7 @@ TransformBase TransformBase::Inverse() const
 	ret.SetScale(reciprocalScale);
 	myQuaternion invQuat = _rotation.Inverse();
 	ret.SetRotation(invQuat);
-	ret.SetPosition( (invQuat * (-_position)) * reciprocalScale);
+	ret.SetPosition((invQuat * (-_position)) * reciprocalScale);
 
 	return ret;
 }
@@ -170,14 +160,14 @@ TransformBase TransformBase::LocalToWorld(const TransformBase& InParentWorldTran
 		+ InParentWorldTransform.GetRotation() * (GetPosition() * InParentWorldTransform.GetScale())
 	);
 
-	return ret;	
+	return ret;
 }
 
 TransformBase TransformBase::WorldToLocal(const TransformBase& InParentWorldTransform) const
 {
 	TransformBase invParent = InParentWorldTransform.Inverse();
 	TransformBase ret;
-	
+
 	ret.SetScale(GetScale() * invParent.GetScale());
 
 	ret.SetRotation(GetRotation() * invParent.GetRotation());
@@ -186,9 +176,9 @@ TransformBase TransformBase::WorldToLocal(const TransformBase& InParentWorldTran
 
 	ret.SetPosition(
 		invParent.GetPosition()
-		+ ( invParent.GetRotation() * GetPosition() ) * invParent.GetScale()
+		+ (invParent.GetRotation() * GetPosition()) * invParent.GetScale()
 	);
-	/*	- 강의 원본 코드에는, posW 를 scaleP 부터 처리후에, rotP 를 처리함. 
+	/*	- 강의 원본 코드에는, posW 를 scaleP 부터 처리후에, rotP 를 처리함.
 		- 로컬 -> 월드를 posL 에 scaleP 를 하고, rotP 를 했으니, 월드 -> 로컬에서는 역순으로 해야 구할 수 있는 건데,
 		  강의 코드에 오류가 있는 건지, 내가 이해를 잘 못했던건지.. 모르겠다.
 		- 돌려보니 잘 작동한다. 강의 코드가 오류인듯
@@ -201,7 +191,7 @@ TransformBase TransformBase::WorldToLocal(const TransformBase& InParentWorldTran
 myVec3 TransformBase::WorldToLocalPos(const myVec3& InWorldVector) const
 {
 	TransformBase ownsInverse = Inverse();
-	
-	return ownsInverse.GetPosition() + ( (ownsInverse.GetRotation() * InWorldVector) * ownsInverse.GetScale() );
+
+	return ownsInverse.GetPosition() + ((ownsInverse.GetRotation() * InWorldVector) * ownsInverse.GetScale());
 	// 마찬가지로 잘 작동한다. 강의 코드가 오류인듯
 }

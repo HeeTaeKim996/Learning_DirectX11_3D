@@ -13,12 +13,18 @@
     <ClCompile Include="TesterPch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="MatrixCompare.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TesterPch.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="TesterUtils.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixCompare.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>

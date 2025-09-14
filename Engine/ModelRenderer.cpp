@@ -27,6 +27,7 @@ void ModelRenderer::Update()
 		for (uint32 i = 0; i < boneCount; i++)
 		{
 			shared_ptr<ModelBone> bone = bones[i];
+			//boneDesc.transforms[i] = bone->transform;
 			boneDesc.transforms[i] = bone->transform;
 		}
 		RENDER->PushBoneData(boneDesc);
@@ -51,8 +52,6 @@ void ModelRenderer::Update()
 			// BoneIndex
 			_shader->GetScalar("BoneIndex")->SetInt(mesh->boneIndex);
 			
-
-
 
 			uint32 stride = mesh->vertexBuffer->GetStride();
 			uint32 offset = mesh->vertexBuffer->GetOffset();

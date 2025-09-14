@@ -296,7 +296,7 @@ myEulerAngles myQuaternion::ToEulerAngles() const
 	retEuler.Yaw = Math::Rad2Deg(atan2(sinYcosP, cosYcosP));
 
 	return retEuler;
-#elif ROLL_PITCH_YAW
+#elif defined(ROLL_PITCH_YAW)
 	assert(0); // W X Y Z 순으로 - - + + 일때의 euler->quat 을 기반으로 한 공식 도출이 필요한데, 아직 안구함..
 #else
 	assert(0); // 플래그 최소 1개 필요

@@ -18,6 +18,8 @@ public:
 
 	myVec3 ToVec3();
 
+	myEulerAngles operator-() const { return myEulerAngles(-Pitch, -Yaw, -Roll); }
+
 public:
 	// ¸â¹ö 
 	float Pitch;

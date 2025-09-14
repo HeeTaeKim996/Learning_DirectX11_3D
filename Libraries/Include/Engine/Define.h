@@ -16,6 +16,12 @@ public:										\
 */
 
 
+// Bone
+#define MAX_MODEL_TRANSFORMS 250
+#define MAX_MODEL_KEYFRAMES 500
+
+
+
 #define CHECK(p)	assert(SUCCEEDED(p))
 #define GAME		Game::GetInstance()		
 #define GRAPHICS	Graphics::GetInstance()
@@ -26,7 +32,7 @@ public:										\
 #define DT			TIME->GetDeltaTime()
 #define RESOURCES	ResourceManager::GetInstance()
 #define RENDER		RenderManager::GetInstance()
-#define GUI			ImGuiManager::GetInstance()
+#define USE_I_M_G_U_I_I_N_D_X_1_1			ImGuiManager::GetInstance()
 
 #endif 
 

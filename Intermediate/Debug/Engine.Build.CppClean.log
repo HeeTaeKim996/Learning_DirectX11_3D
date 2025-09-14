@@ -2,10 +2,9 @@ c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\libraries\lib\engine\engine.pdb
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\libraries\lib\engine\engine.idb
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\pch.obj
-c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\mymathutils.obj
-c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\monobehaviour.obj
-c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\modelrenderer.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\modelmesh.obj
+c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\modelanimator.obj
+c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\modelanimation.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\model.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\meshrenderer.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\mesh.obj
@@ -19,6 +18,7 @@ c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\gameobject.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\game.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\fileutils.obj
+c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\etcutils.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\constantbuffer.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\component.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\camera.obj
@@ -35,6 +35,9 @@ c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\resourcebase.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\rendermanager.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\pass.obj
+c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\mymathutils.obj
+c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\monobehaviour.obj
+c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\modelrenderer.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\tinyxml2.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\imgui_widgets.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\imgui_tables.obj
@@ -45,6 +48,7 @@ c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\imguimanager.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\imgui.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\libraries\lib\engine\engine.lib
+c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\animationdemo.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\assimptool.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\astype.obj
 c:\users\heetae\source\repos\learning_directx11\learningdx11\learning_directx11(3d)\intermediate\debug\camerascript.obj

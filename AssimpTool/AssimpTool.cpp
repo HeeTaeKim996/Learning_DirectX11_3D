@@ -6,7 +6,7 @@ void AssimpTool::Init()
 {
 	CreateModelData(L"Tower", L"Tower");
 	//CreateModelDataByName(L"Tank", L"Tank");
-	//CreateModelDataByName(L"Kachujin", L"Mesh");
+	CreateModelData(L"Kachujin", L"Mesh");
 
 
 	CreateAnimationData(L"Kachujin", L"Idle");

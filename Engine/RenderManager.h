@@ -39,13 +39,28 @@ struct MaterialDesc
 };
 
 
-// Bone
-#define MAX_BONE_TRANSFORMS 50
+
 
 struct BoneDesc
 {
-	Matrix transforms[MAX_BONE_TRANSFORMS];
+	Matrix transforms[MAX_MODEL_TRANSFORMS];
 };
+
+
+
+// Animation
+struct KeyframeDesc
+{
+	int32 animIndex = 0;
+	uint32 currentFrame = 0;
+	// TODO
+	uint32 nextFrame = 0;
+	float ratio = 0.f;
+	float sumTime = 0.f;
+	float speed = 1.f;
+	Vec2 padding;
+};
+
 
 
 
@@ -70,6 +85,8 @@ public:
 	void PushLightData(const LightDesc& desc);
 	void PushMaterialData(const MaterialDesc& desc);
 	void PushBoneData(const BoneDesc& desc);
+	void PushKeyframeData(const KeyframeDesc& desc);
+
 
 private:
 	shared_ptr<Shader> _shader;
@@ -87,13 +104,20 @@ private:
 	shared_ptr<ConstantBuffer<LightDesc>> _lightBuffer;
 	ComPtr<ID3DX11EffectConstantBuffer> _lightEffectBuffer;
 
+
 	MaterialDesc _materialDesc;
 	shared_ptr<ConstantBuffer<MaterialDesc>> _materialBuffer;
 	ComPtr<ID3DX11EffectConstantBuffer> _materialEffectBuffer;
 
+
 	BoneDesc _boneDesc;
 	shared_ptr<ConstantBuffer<BoneDesc>> _boneBuffer;
 	ComPtr<ID3DX11EffectConstantBuffer> _boneEffectBuffer;
+
+
+	KeyframeDesc _keyframeDesc;
+	shared_ptr<ConstantBuffer<KeyframeDesc>> _keyframeBuffer;
+	ComPtr<ID3DX11EffectConstantBuffer> _keyframeEffectBuffer;
 };
 
 

@@ -40,6 +40,9 @@
     <Filter Include="98. Utils\extern\ImGUI">
       <UniqueIdentifier>{1a4fb5b2-695d-4c98-8311-80456fc1df52}</UniqueIdentifier>
     </Filter>
+    <Filter Include="98. Utils\ETCUtils">
+      <UniqueIdentifier>{aaef5f37-1742-462b-b9ad-b2ccaefeffa2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -183,6 +186,15 @@
     <ClInclude Include="ImGuiManager.h">
       <Filter>02. Managers</Filter>
     </ClInclude>
+    <ClInclude Include="ModelAnimation.h">
+      <Filter>00. Engine\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelAnimator.h">
+      <Filter>04. Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ETCUtils.h">
+      <Filter>98. Utils\ETCUtils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -313,6 +325,15 @@
     </ClCompile>
     <ClCompile Include="ImGuiManager.cpp">
       <Filter>02. Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelAnimation.cpp">
+      <Filter>00. Engine\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelAnimator.cpp">
+      <Filter>04. Component</Filter>
+    </ClCompile>
+    <ClCompile Include="ETCUtils.cpp">
+      <Filter>98. Utils\ETCUtils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -108,7 +108,6 @@ struct asKeyframeData
 	Vec3 translation;
 
 };
-
 struct asKeyframe
 {
 	string boneName;
@@ -121,13 +120,6 @@ struct asAnimation
 	uint32 frameCount;
 	float frameRate;
 	float duration;
-	vector<asKeyframe> keyframes;
+	vector<shared_ptr<asKeyframe>> keyframes;
 
-};
-
-// Cache
-struct asAnimationNode
-{
-	aiString name;
-	vector<asKeyframeData> keyframe;
 };

@@ -56,7 +56,14 @@ using namespace Microsoft::WRL;
 #include "imgui.h"
 #include "imgui_impl_dx11.h"
 #include "imgui_impl_win32.h"
+/*	- ImGUI 에 대한 코드. 게임엔진, 그래픽 렌더링 툴에서 자주 사용하는 경량화 UI 라이브러리.
+	- 강의 60.ImGUI 에서 코드 이식을 했지만, 원리는 아얘 모른다. 강의에서 하는 대로 복붙만 함
+	- 추후 ImGUI 에 대해 추가 공부 또는 수정에 대비하여 #define.h 에 IMGUI 를 사용한 부분을 Ctrl + , 로 
+	  구분을 쉽게 하기 위해, USE_I_M_G_U_I_I_N_D_X_1_1 로 define 함
+	- 위 Ctrl + , USE_I_M_G_U_I_I_N_D_X_1_1 와, 98.Utils - extern - ImGUI 내에 외부(강의 60.ImGUI 참조) 에서 받아온
+	  소스코드들을 따로 분류했음
 
+*/
 
 
 

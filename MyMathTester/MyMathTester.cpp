@@ -2,6 +2,7 @@
 #include "TesterPch.h"
 #include "assert.h"
 #include "TesterUtils.h"
+#include "MatrixCompare.h"
 
 //#include "myVec3.h"
 //#include "myMatrix3x3.h"
@@ -370,7 +371,127 @@ int main()
 
     //TestVec4Matrix4x4();
 
-    TestQuaternion();
+    //TestQuaternion();
 
     //TestTransformBase();
+
+
+    {
+        //myMatrix4x4 firstMatrix =
+        //    myMatrix4x4(myVec4(1, 2, 3, 4), myVec4(5, 6, 7, 8), myVec4(8, 7, 6, 5), myVec4(4, 3, 2, 1));
+
+        //myMatrix4x4 secondMatrix(&firstMatrix[0][0]);
+
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    for (int j = 0; j < 4; j++)
+        //    {
+        //        printf("%f\t", secondMatrix[i][j]);
+        //    }
+        //    printf("\n");
+        //}
+    }
+
+
+
+    {
+        //myMatrix4x4 scaleMatrix(
+        //    myVec4(2, 0, 0, 0), 
+        //    myVec4(0, 3, 0, 0), 
+        //    myVec4(0, 0, 4, 0), 
+        //    myVec4(0, 0, 0, 1));
+
+        //myQuaternion quatRot(myEulerAngles(24, 62, 18));
+        //myMatrix3x3 rotMatrix33 = quatRot.ToRotateMatrix();
+        //myMatrix4x4 rotMatrix = rotMatrix33.ToMatrix4x4();
+
+
+        //myMatrix4x4 translationMatrix(
+        //    myVec4(1, 0, 0, 0),
+        //    myVec4(0, 1, 0, 0),
+        //    myVec4(0, 0, 1, 0),
+        //    myVec4(52, 11, 27, 1));
+
+        //
+        //myMatrix4x4 srt = scaleMatrix * rotMatrix * translationMatrix;
+
+        //PrintMatrix4x4(scaleMatrix);
+        //PrintMatrix4x4(rotMatrix);
+        //PrintMatrix4x4(translationMatrix);
+        //PrintMatrix4x4(srt);
+
+        //myVec3 pos, scale;
+        //myQuaternion quat;
+
+        //srt.Decompose(pos, quat, scale);
+
+        //PrintVec3(pos);
+        //PrintVec3(scale);
+        //PrintVec3(quat.ToEulerAngles().ToVec3());
+    }
+
+
+#if 0
+    {
+        myMatrix4x4 srt(myVec3(2, 7, 4), myQuaternion(myEulerAngles(18.2f, 43.7f, 52.1f)),
+            myVec3(-18.2, 20.3, 40.2));
+
+        PrintMatrix4x4(srt);
+
+        myVec3 regScale;
+        myQuaternion regRotation;
+        myVec3 regTranslation;
+
+        srt.Decompose(regScale, regRotation, regTranslation);
+
+        PrintVec3(regScale);
+        PrintVec3(regRotation.ToEulerAngles().ToVec3());
+        PrintVec3(regTranslation);
+    }
+#endif
+
+    {
+
+
+
+#if 0
+        SimpleMatrix parent = SimpleMatrix(
+            1, 0, 0, 0,
+            0, 1, 0, 0,
+            0, 0, 1, 0,
+            0, 0, 0, 1
+        );
+
+        SimpleMatrix rootTransform = SimpleMatrix(
+            1, 0, 0, 0,
+            0, 1, 0, 0,
+            0, 0, 1, 0,
+            0.042101, 114.053238, -0.311199, 1
+        );
+
+        MatrixCompare::Compare(myVec3(1, 1, 1), myQuaternion(-0.075489f, 0.479205f, 0.037999f, 0.873624f),
+            myVec3(0.577255, 95.37883, 1.211316), parent, rootTransform);
+#else
+
+        TransformBase parentBase(
+            myVec3(22.f, 75.f, 24.f), 
+            myQuaternion(myEulerAngles(22.f, 52.f, 30.f)),
+            myVec3(2, 6, 3.2f));
+        myMatrix4x4 parentMat = parentBase.GetSRT();
+        SimpleMatrix parent(&parentMat[0][0]);
+
+        TransformBase rootBase(
+            myVec3(42.f, 36.f, 18.f),
+            myQuaternion(myEulerAngles(18.2f, 37.4f, 15.2f)),
+            myVec3(3.2f, 6.7f, 1.8f));
+        myMatrix4x4 rootMat = rootBase.GetSRT();
+        SimpleMatrix root(&rootMat[0][0]);
+
+
+        MatrixCompare::Compare(myVec3(1, 22, 67), myQuaternion(-0.075489f, 0.479205f, 0.037999f, 0.873624f),
+            myVec3(0.577255, 95.37883, 1.211316), parent, root);
+#endif
+    }
+
+
 }
